@@ -1,0 +1,70 @@
+{
+  "zh-CN": [
+    {
+      "name": "home",
+      "path": "/home"
+    },
+    {
+      "name": "docs",
+      "path": "/docs",
+      "children": [
+        {
+          "path": "/plan",
+          "name": "plan",
+          "urlPath": "/docs/plan",
+          "title": "plan",
+          "children": [
+            {
+              "path": "/index",
+              "urlPath": "/docs/plan/index",
+              "name": "index",
+              "title": "index"
+            }
+          ]
+        },
+        {
+          "path": "/api",
+          "name": "api",
+          "urlPath": "/docs/api"
+        }
+      ]
+    }
+  ],
+  "es": [
+    {
+      "name": "Changelog",
+      "path": "/changelog"
+    },
+    {
+      "name": "Components",
+      "groups": [
+        {
+          "groupName": "Basic",
+          "list": [
+            {
+              "path": "/layout",
+              "title": "Layout"
+            },
+            {
+              "path": "/container",
+              "title": "Layout Container"
+            }
+          ]
+        },
+        {
+          "groupName": "Form",
+          "list": [
+            {
+              "path": "/radio",
+              "title": "Radio"
+            },
+            {
+              "path": "/checkbox",
+              "title": "Checkbox"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

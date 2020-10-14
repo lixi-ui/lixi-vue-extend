@@ -1,0 +1,22 @@
+node_modules
+lib
+.npmrc
+coverage
+waiter.config.js
+build/bin/algolia-key.js
+extend/project/*
+jest.config-copy.js
+examples/lixi-ui
+
+server/public/lixi-ui
+server/public/dist
+
+src/style/lib
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
