@@ -1,13 +1,13 @@
 <template>
   <button
-    class="lxv-button"
+    class="lxve-button"
     @click="handleClick"
     :disabled="buttonDisabled || loading"
     :autofocus="autofocus"
     :type="nativeType"
     :class="[
-      type ? 'lxv-button--' + type : '',
-      buttonSize ? 'lxv-button--' + buttonSize : '',
+      type ? 'lxve-button--' + type : '',
+      buttonSize ? 'lxve-button--' + buttonSize : '',
       {
         'is-disabled': buttonDisabled,
         'is-loading': loading,
@@ -17,7 +17,7 @@
       }
     ]"
   >
-    <i class="lxv-icon-loading" v-if="loading"></i>
+    <i class="lxve-icon-loading" v-if="loading"></i>
     <i :class="icon" v-if="icon && !loading"></i>
     <span v-if="$slots.default"><slot></slot></span>
   </button>
@@ -25,7 +25,7 @@
 <script lang="ts">
   let num: number = 1
   export default {
-    name: 'lxv-button',
+    name: 'lxve-button',
 
     inject: {
       elForm: {

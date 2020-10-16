@@ -1,10 +1,10 @@
 <template>
-  <div class="lxv-button-group">
+  <div class="lxve-button-group">
     <slot></slot>
   </div>
 </template>
 <script>
   export default {
-    name: 'LxvButtonGroup'
+    name: 'LxveButtonGroup'
   };
 </script>
