@@ -14,7 +14,7 @@ import Vue from 'vue'
 import plan from './plan/zh-CN/index.md'
 import planEs from './plan/es/index.md'
 
-import navsData from '../../router/nav.config.json'
+import navsData from '../../router/nav.config.js'
 
 export default {
   name: 'docs',

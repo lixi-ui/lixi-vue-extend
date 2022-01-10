@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import navConfig from './nav.config.json'
+import navConfig from './nav.config.js'
 
 import button from "../../src/components/button/docs/index.md"
 

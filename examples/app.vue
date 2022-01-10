@@ -11,7 +11,7 @@
 
 <script>
 
-  import navsData from './router/nav.config.json'
+  import navsData from './router/nav.config.js'
 
   export default {
     name: "app",

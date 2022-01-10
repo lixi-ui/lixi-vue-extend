@@ -1,4 +1,6 @@
-{
+
+
+const routers = {
   "zh-CN": [
     {
       "name": "home",
@@ -19,6 +21,12 @@
               "urlPath": "/docs/plan/index",
               "name": "index",
               "title": "index"
+            },
+            {
+              "path": "/introduce",
+              "urlPath": "/docs/plan/introduce",
+              "name": "introduce",
+              "title": "introduce"
             }
           ]
         },
@@ -68,3 +76,5 @@
     }
   ]
 }
+
+export default routers;
