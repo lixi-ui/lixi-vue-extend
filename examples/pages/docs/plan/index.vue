@@ -1,7 +1,8 @@
 <template>
   <div class="page-component">
     <h3>plan</h3>
-    <Collection text="测试"/>
+    <g-loading :show="true"/>
+    <Collection text="收藏"/>
     <router-view>
     </router-view>
   </div>

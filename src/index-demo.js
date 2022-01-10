@@ -1,12 +1,12 @@
-import LxvButton from "./compoments/button/package/index.ts";
-import LxvButtonGroup from "./compoments/button-group/package/index.ts";
-import LxvDropdown from "./compoments/dropdown/package/index.ts";
-import LxvDropdownItem from "./compoments/dropdown-item/package/index.ts";
-import LxvDropdownMenu from "./compoments/dropdown-menu/package/index.ts";
-import LxvTooltip from "./compoments/tooltip/package/index.ts";
-import LxvDemo from "./compoments/button/demo/index.vue";
-import LxveButton from "../extend/project/lixi-extend/src/compoments/button/demo/index.vue";
-import LxveDemo from "../extend/project/lixi-extend/src/compoments/button/demo/index.vue";
+import LxvButton from "./components/button/package/index.ts";
+import LxvButtonGroup from "./components/button-group/package/index.ts";
+import LxvDropdown from "./components/dropdown/package/index.ts";
+import LxvDropdownItem from "./components/dropdown-item/package/index.ts";
+import LxvDropdownMenu from "./components/dropdown-menu/package/index.ts";
+import LxvTooltip from "./components/tooltip/package/index.ts";
+import LxvDemo from "./components/button/demo/index.vue";
+import LxveButton from "../extend/project/lixi-extend/src/components/button/demo/index.vue";
+import LxveDemo from "../extend/project/lixi-extend/src/components/button/demo/index.vue";
 
 var install = function(Vue){
   Vue.component(LxvButton.name, LxvButton);
