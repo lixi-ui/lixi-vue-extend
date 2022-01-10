@@ -16,7 +16,7 @@
               </router-link>
             </span>
              <span v-if="item.children">
-              <lxv-dropdown :hide-on-click="false">
+              <!-- <lxv-dropdown :hide-on-click="false">
                 <span class="el-dropdown-link">
                   {{ item.name }}<i class="el-icon-arrow-down el-icon--right"></i>
                 </span>
@@ -29,7 +29,7 @@
                     </router-link>
                   </lxv-dropdown-item>
                 </lxv-dropdown-menu>
-              </lxv-dropdown>
+              </lxv-dropdown> -->
             </span>
           </div>
           <!-- <div class="nav-item">

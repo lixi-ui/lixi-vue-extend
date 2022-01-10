@@ -1,0 +1,98 @@
+<template>
+  <div class="float-contact-wrap">
+    <div class="content-inner-wrap" @click="concactShopper">
+      <p class="content-disc">
+        <span>{{ $lang.contactSeller }}</span>
+      </p>
+      <div class="detail-chat-icon"><i></i></div>
+    </div>
+  </div>
+</template>
+
+<script>
+import bus from 'framework/utils/bus';
+export default {
+  methods: {
+    concactShopper() {
+      bus.$emit('showContact')
+    }
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@media only screen and (min-width: 1024px) {
+  .float-contact-wrap {
+    position: fixed;
+    right: 16px;
+    bottom: 100px;
+    z-index: 1999;
+    cursor: pointer;
+    .content-inner-wrap {
+      position: relative;
+      min-width: 40px;
+      height: 40px;
+      &:hover {
+        .content-disc {
+          max-width: 300px;
+          border-radius: 20px;
+          opacity: 1;
+        }
+        .detail-chat-icon {
+          box-shadow: none;
+        }
+      }
+      .detail-chat-icon {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        box-shadow: 0 2px 11px 0 rgba(0, 0, 0, 0.2);
+        background: linear-gradient(90deg, #FF5224 0%, #FF5D5D 100%);
+        transition: all 0.2s linear;
+        i {
+          width: 24px;
+          height: 24px;
+          background: url("~asset/images/inmail_detailpage@2x.png") center
+            center/contain no-repeat;
+        }
+      }
+      .content-disc {
+        overflow: hidden;
+        position: absolute;
+        box-sizing: border-box;
+        right: 0;
+        top: 0;
+        // @include multipleEllipsis(1);
+        white-space: nowrap;
+        padding: 0 40px 0 12px;
+        max-width: 0;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #ff5224;
+        background: #fff;
+        opacity: 0;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.07);
+        transition: all 0.2s linear;
+        span {
+          padding-right: 8px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .float-contact-wrap {
+    display: none;
+  }
+}
+</style>

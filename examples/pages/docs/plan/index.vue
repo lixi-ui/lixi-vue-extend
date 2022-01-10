@@ -1,6 +1,7 @@
 <template>
   <div class="page-component">
     <h3>plan</h3>
+    <Collection text="测试"/>
     <router-view>
     </router-view>
   </div>
@@ -10,13 +11,15 @@
 import Vue from 'vue'
 import plan from './zh-CN/index.md'
 import planEs from './es/index.md'
+import Collection from '../../../../src/components/collection/index.vue'
 
 
 export default {
   name: 'docs',
   components: {
     plan: plan,
-    planEs
+    planEs,
+    Collection
   },
   data(){
     return{

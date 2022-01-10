@@ -18,14 +18,14 @@ const CACHE_LOADER = {
 const CSS_LOADERS = [
   'style-loader',
   'css-loader',
-  {
-    loader: 'postcss-loader',
-    options: {
-      config: {
-        path: POSTCSS_CONFIG_FILE,
-      },
-    },
-  },
+  // {
+  //   loader: 'postcss-loader',
+  //   options: {
+  //     config: {
+  //       path: POSTCSS_CONFIG_FILE,
+  //     },
+  //   },
+  // },
 ];
 
 export const baseConfig = {
