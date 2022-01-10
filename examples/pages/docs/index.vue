@@ -3,8 +3,9 @@
     <h1 @click="handlerClick">Docs</h1>
     <!-- <components :is="componentsName">
     </components> -->
-    <router-view>
-    </router-view>
+    <main-content class="page-component" :nav="nav">
+      <router-view></router-view>
+    </main-content>
   </div>
 </template>
 
@@ -13,6 +14,7 @@ import Vue from 'vue'
 import plan from './plan/zh-CN/index.md'
 import planEs from './plan/es/index.md'
 
+import navsData from '../../router/nav.config.json'
 
 export default {
   name: 'docs',
@@ -22,7 +24,8 @@ export default {
   },
   data(){
     return{
-      componentsName: 'plan'
+      componentsName: 'plan',
+      nav: navsData["zh-CN"][1].children
     }
   },
   methods: {

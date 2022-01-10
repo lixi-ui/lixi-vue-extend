@@ -1,9 +1,11 @@
 <template>
   <div id="app">
     <main-header :navAll="navAll"></main-header>
-    <main-content class="page-component" :nav="nav">
+    <div>
       <router-view></router-view>
-    </main-content>
+    </div>
+    <!-- <main-content class="page-component" :nav="nav">
+    </main-content> -->
   </div>
 </template>
 

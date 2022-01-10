@@ -8,7 +8,7 @@
       <div class="nav-right">
         <div class="nav-right-wrap">
           <div class="nav-item" v-for="(item,index) in navAll" :key="index">
-            <span v-if="!item.children">
+            <span>
               <router-link
                 active-class="active"
                 :to="item.path">
