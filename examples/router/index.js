@@ -17,6 +17,7 @@ var routes = [
     name: 'docs',
     path: '/docs',
     urlPath: '/docs',
+    redirect: '/docs/introduce',
     component: Docs,
     children: docsRouter
   }

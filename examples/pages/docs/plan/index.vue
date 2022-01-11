@@ -1,12 +1,6 @@
 <template>
   <div class="page-component">
-    <h3>plan</h3>
     <g-loading :show="true"/>
-    <Collection text="收藏"/>
-    <component :is="plan"/>
-    --
-    <router-view>
-    </router-view>
   </div>
 </template>
 

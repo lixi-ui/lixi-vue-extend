@@ -7,7 +7,6 @@
       <span></span>
       <span></span>
     </div>
-    <div>{{ t('el.loading.text') }}</div>
   </div>
 </template>
 

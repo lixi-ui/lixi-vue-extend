@@ -1,5 +1,6 @@
 import Introduce from './introduce/index';
 import Plan from './plan/index';
+import Loading from 'g-ui/src/components/loading/doc/index.vue';
 
 const router = [
   {
@@ -15,6 +16,13 @@ const router = [
     urlPath: '/docs/plan',
     title: '计划',
     component: Plan
+  },
+  {
+    path: '/docs/loading',
+    name: 'loading',
+    urlPath: '/docs/loading',
+    title: '加载',
+    component: Loading
   }
 ]
 export default router;
