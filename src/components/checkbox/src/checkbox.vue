@@ -7,6 +7,7 @@
 </template>
 <script>
   export default {
+    name: 'g-checkbox',
     data() {
       return {
         // checked: false
@@ -34,7 +35,7 @@
   };
 </script>
 <style lang="scss" scoped>
-  @import "~asset/scss/base.scss";
+  @import "g-ui/src/style/src/base1.scss";
   @media only screen and (max-width: 1023px) {
     input[type=checkbox] {
       width: r(12);
