@@ -7,7 +7,7 @@
           <span>Gshopper Customer Center</span>
         </div>
         <ul class="chat-info-list" ref="chatInfoList">
-          <li v-for="item in messageList">
+          <li v-for="(item, i) in messageList" :key="i">
             <p class="chat-date">{{ item.createdAt | parseTime('{m}/{d} {h}:{i}') }}</p>
             <p class="chat-message" :class="{'mine': userId == (item._sender ? item._sender.userId : '')}">
               <img ref="chatImageInfo" @click="linkImg(item.url)" :src="item.url" alt="" v-if="item.messageType === 'file'">

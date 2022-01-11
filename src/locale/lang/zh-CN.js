@@ -1,5 +1,8 @@
 export default {
   el: {
+    loading:{
+      text: '加载'
+    },
     colorpicker: {
       confirm: '确定',
       clear: '清空'

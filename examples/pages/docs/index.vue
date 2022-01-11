@@ -1,8 +1,5 @@
 <template>
   <div class="page-component page-container">
-    <h1 @click="handlerClick">Docs</h1>
-    <!-- <components :is="componentsName">
-    </components> -->
     <main-content class="page-component" :nav="nav">
       <router-view></router-view>
     </main-content>
@@ -10,27 +7,13 @@
 </template>
 
 <script>
-import Vue from 'vue'
-import plan from './plan/zh-CN/index.md'
-import planEs from './plan/es/index.md'
-
-import navsData from '../../router/nav.config.js'
+import docsRouter from './docs-router.js'
 
 export default {
   name: 'docs',
-  components: {
-    plan: plan,
-    planEs
-  },
   data(){
     return{
-      componentsName: 'plan',
-      nav: navsData["zh-CN"][1].children
-    }
-  },
-  methods: {
-    handlerClick(){
-      this.componentsName = 'planEs'
+      nav: docsRouter
     }
   }
 }

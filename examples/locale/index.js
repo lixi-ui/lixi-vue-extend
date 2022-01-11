@@ -1,9 +1,7 @@
-import defaultLang from 'g-ui/src/locale/lang/zh-CN';
+import defaultLang from 'examples/locale/lang/zh-CN';
 import Vue from 'vue';
 import deepmerge from 'deepmerge';
-import Format from './format';
 
-const format = Format(Vue);
 let lang = defaultLang;
 let merged = false;
 let i18nHandler = function() {
@@ -30,7 +28,7 @@ export const t = function(path, options) {
   for (let i = 0, j = array.length; i < j; i++) {
     const property = array[i];
     value = current[property];
-    if (i === j - 1) return format(value, options);
+    if (i === j - 1) return value;
     if (!value) return '';
     current = value;
   }

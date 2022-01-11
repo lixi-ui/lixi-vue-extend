@@ -3,12 +3,16 @@
 import Button from './components/button/package/index.ts';
 import Loading from './components/Loading/src/index.ts';
 
+import locale from 'g-ui/src/locale/index';
+
 const components = [
   Button,
   Loading
 ];
 
 const install = function(Vue, opts = {}) {
+
+  locale.use(opts.locale)
 
   components.forEach(component => {
     Vue.component(component.name, component);

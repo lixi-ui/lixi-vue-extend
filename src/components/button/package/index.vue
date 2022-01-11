@@ -17,7 +17,9 @@
       }
     ]"
   >
-    <i class="lxve-icon-loading" v-if="loading"></i>
+    <i class="lxve-icon-loading" v-if="loading">
+      <!-- {{ $t('loading') }} -->
+    </i>
     <i :class="icon" v-if="icon && !loading"></i>
     <span v-if="$slots.default"><slot></slot></span>
   </button>

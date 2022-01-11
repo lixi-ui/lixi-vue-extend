@@ -3,14 +3,11 @@
     <div class="main-side">
       <div class="side-wrap">
         <div class="side-group" v-for="(item,index) in nav" :key="index">
-          <div class="title">{{ item.title }}</div>
-          <div class="side-item"  v-for="(item1,i) in item.children" :key="i">
-            <router-link
-              active-class="active"
-              :to="item1.urlPath">
-                {{ item1.title }}
-            </router-link>
-          </div>
+          <router-link
+            active-class="active"
+            :to="item.path">
+            {{ item.title }}
+          </router-link>
         </div>
       </div>
     </div>
@@ -23,7 +20,6 @@
   </div>
 </template>
 <script>
-  import Introduce from '../i18n/zh-CN/docs/introduce.md'
   export default {
     name: 'MainContent',
     props:{
@@ -36,18 +32,9 @@
     },
     data () {
       return {
-        title: 'title',
-        options: [{
-          value: '0.1.0',
-          label: '0.1.0'
-        }, {
-          value: '1.0.0',
-          label: '1.0.0'
-        }],
-        value: '0.1.0'
+        title: 'title'
       }
     },
-    components: {Introduce}
   }
 </script>
 <style scoped lang="scss">
@@ -65,8 +52,9 @@
       height: 100%;
       overflow: auto;
       .side-group{
-        margin-bottom: 10px;
-        padding: 10px 20px;
+        // margin-bottom: 10px;
+        padding: 0px 10px 0px 20px;
+        font-size: 16px;
         .title{
           color: #333;
           padding-bottom: 5px;
@@ -74,21 +62,18 @@
           font-weight: 600;
           border-bottom: 1px solid lightgray;
         }
-        .side-item{
-          a{
-            padding: 5px;
-            display: inline-block;
-            width: 100%;
-            color: #444;
-            text-decoration: none;
-            &:hover{
-              color: #fb6638;
-            }
-          }
-          .active{
+        a{
+          padding: 3px 3px;
+          display: inline-block;
+          width: 100%;
+          color: #444;
+          text-decoration: none;
+          &:hover{
             color: #fb6638;
           }
-
+        }
+        .active{
+          color: #fb6638;
         }
       }
     }

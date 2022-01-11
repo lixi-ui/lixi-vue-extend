@@ -10,7 +10,7 @@
   "scripts": {
     "test": "jest",
     "dev": "node ./build/webpack.dev.js",
-    "server": "node ./server/bin/www",
+    "server": "node.exe ./server/bin/www",
     "prod": "node ./build/webpack.prod.js",
     "dist": "node ./build/webpack.conf.js",
     "analyzer": "node ./build/webpack.prod.js",

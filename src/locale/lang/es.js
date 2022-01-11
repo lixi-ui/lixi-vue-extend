@@ -1,5 +1,8 @@
 export default {
   el: {
+    loading: {
+      text: 'Loading'
+    },
     colorpicker: {
       confirm: 'Confirmar',
       clear: 'Despejar'

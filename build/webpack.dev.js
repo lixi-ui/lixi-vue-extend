@@ -49,8 +49,10 @@ var config = {
     extensions: ['.js', '.vue', '.json'],
     modules: ['node_modules'],
     alias: {
-      'src': path.join(__dirname,'../src'),
-      'lixiv-ui':  path.join(__dirname,'../'),
+      'src': path.join(__dirname, '../src'),
+      'lixiv-ui':  path.join(__dirname, '../'),
+      'g-ui':  path.join(__dirname, '../'),
+      "examples": path.join(__dirname, '../examples')
     }
   },
   devServer: {

@@ -4,14 +4,14 @@
     <div>
       <router-view></router-view>
     </div>
-    <!-- <main-content class="page-component" :nav="nav">
-    </main-content> -->
   </div>
 </template>
 
 <script>
 
-  import navsData from './router/nav.config.js'
+  import navsData from './router/nav.config.js';
+  import locale from 'g-ui/src/locale/index';
+  import webLocale from 'examples/locale/index.js';
 
   export default {
     name: "app",
@@ -23,6 +23,15 @@
       }
     },
     components:{
+    },
+    beforeCreate () {
+      this.$locale.$lang = localStorage.getItem('g-lang');
+      if(!this.$locale.$lang){
+        this.$locale.$lang = 'zh-CN';
+        localStorage.setItem('g-lang', 'zh-CN')
+      }
+      locale.use()
+      webLocale.use()
     },
     mounted(){
       // console.log('nav?',navsData["zh-CN"][1].children[0].children);

@@ -3,6 +3,8 @@
     <h3>plan</h3>
     <g-loading :show="true"/>
     <Collection text="收藏"/>
+    <component :is="plan"/>
+    --
     <router-view>
     </router-view>
   </div>
@@ -13,18 +15,27 @@ import Vue from 'vue'
 import plan from './zh-CN/index.md'
 import planEs from './es/index.md'
 import Collection from '../../../../src/components/collection/index.vue'
+import Component from 'examples/pages/component.vue'
 
 
 export default {
   name: 'docs',
   components: {
-    plan: plan,
-    planEs,
-    Collection
+    Collection,
+    Component
   },
   data(){
     return{
-      componentsName: 'plan'
+      componentsName: 'plan',
+      plan: plan
+    }
+  },
+  created () {
+    console.log('this.$locale.$lang', this.$locale.$lang)
+    if (this.$locale.$lang === 'zh-CN') {
+      this.plan = plan
+    } else {
+      this.plan = planEs
     }
   },
   methods: {

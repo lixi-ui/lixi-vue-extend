@@ -7,10 +7,12 @@
       <span></span>
       <span></span>
     </div>
+    <div>{{ t('el.loading.text') }}</div>
   </div>
 </template>
 
 <script>
+  import { t } from 'g-ui/src/locale/index.js'
   export default {
     name: 'g-loading',
     props: {
@@ -18,6 +20,9 @@
         type: Boolean,
         default: false
       }
+    },
+    methods:{
+      t: t
     }
   };
 </script>

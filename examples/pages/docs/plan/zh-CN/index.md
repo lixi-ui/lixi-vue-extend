@@ -1,4 +1,4 @@
-# docs / plan / index-md
+# docs / plan / 中文
 
 :::demo
 ```html
