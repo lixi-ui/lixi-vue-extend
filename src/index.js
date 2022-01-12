@@ -3,13 +3,15 @@
 import Button from './components/button/package/index.ts';
 import Loading from './components/Loading/src/index.ts';
 import checkbox from './components/checkbox//src/index.ts';
+import europeWarranty from './components/europe-warranty/src/index.ts';
 
 import locale from 'g-ui/src/locale/index';
 
 const components = [
   Button,
   Loading,
-  checkbox
+  checkbox,
+  europeWarranty
 ];
 
 const install = function(Vue, opts = {}) {

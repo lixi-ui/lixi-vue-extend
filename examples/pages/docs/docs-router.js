@@ -2,6 +2,7 @@ import Introduce from './introduce/index';
 import Plan from './plan/index';
 import Loading from 'g-ui/src/components/loading/doc/index.vue';
 import Checkbox from 'g-ui/src/components/checkbox/doc/index.vue';
+import EuropeWarranty from 'g-ui/src/components/europe-warranty/doc/index.vue';
 
 const router = [
   {
@@ -31,6 +32,13 @@ const router = [
     urlPath: '/docs/checkbox',
     title: '复选框',
     component: Checkbox
+  },
+  {
+    path: '/docs/europe-warranty',
+    name: 'europeWarranty',
+    urlPath: '/docs/europe-warranty',
+    title: '保修',
+    component: EuropeWarranty
   }
 ]
 export default router;

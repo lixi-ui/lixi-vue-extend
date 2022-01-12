@@ -13,15 +13,15 @@
         </li>-->
         <li class="tooltips-item hover-animation">
           <i class="icon-tax"></i>
-          <span>{{ $lang.taxLabel }}</span>
+          <span>税务标签</span>
           <div class="pop-wrap">
-            <span>{{ $lang.taxContent }}</span>
+            <span>税务内容</span>
             <div class="tips-triangle"><span></span></div>
           </div>
         </li>
         <li class="tooltips-item hover-animation">
           <i class="icon-payment"></i>
-          <span>{{ $lang.securePayment }}</span>
+          <span>安全支付</span>
           <div class="pop-wrap">
             <i class="service-payment"></i>
             <div class="tips-triangle"><span></span></div>
@@ -32,7 +32,7 @@
     </div>
     <van-popup class="tooltips-popup" v-model="visiblePopup" :overlay="visiblePopup && isMobile" position="bottom">
       <div class="tooltips-popup-content" v-show="visiblePopup">
-        <h2>{{ $lang.serviceTitle }}</h2>
+        <h2>服务标题</h2>
         <ul class="service-list">
           <!--<li>
             <h3>{{ $lang.warrantyLabel }}</h3>
@@ -42,15 +42,15 @@
             </p>
           </li>-->
           <li>
-            <h3>{{ $lang.taxLabel }}</h3>
+            <h3>税务标签</h3>
             <p>
-              <span>{{ $lang.taxContent }}</span>
+              <span>税务内容</span>
             </p>
           </li>
           <li>
-            <h3>{{ $lang.securePayment }}</h3>
+            <h3>安全支付</h3>
             <p>
-              <img src="~asset/images/wap/icon-service-payment@2x.png" alt="">
+              <!-- <img src="~asset/images/wap/icon-service-payment@2x.png" alt=""> -->
             </p>
           </li>
         </ul>
@@ -61,9 +61,13 @@
 </template>
 
 <script>
-  import { getCookie } from '../../framework/utils/utils';
+  import { getCookie } from 'g-ui/src/utils/framework/utils/utils';
+  import { Popup } from 'vant'
   export default {
-    name: 'europeWarranty',
+    name: 'g-europe-warranty',
+    components: {
+      vanPopup: Popup
+    },
     data() {
       return {
         visibleEuropeWarranty: false,
@@ -72,12 +76,13 @@
     },
     computed: {
       isMobile() {
-        return this.$root.isMobile;
+        return true;
       }
     },
     mounted() {
       const countryId = getCookie('countryId');
-      this.visibleEuropeWarranty = ['47', '236', '102', '105', '131', '219', '227', '277'].includes(countryId);
+      // this.visibleEuropeWarranty = ['47', '236', '102', '105', '131', '219', '227', '277'].includes(countryId);
+      this.visibleEuropeWarranty = true;
     },
     methods: {
       showPopup() {
@@ -90,7 +95,8 @@
 </script>
 
 <style scoped lang="scss">
-  @import "~asset/scss/base.scss";
+  // @import "~asset/scss/base.scss";
+  @import "g-ui/src/style/src/base1.scss";
   @media only screen and (max-width: 1023px) {
     .tooltips-component {
       margin-top: r(16);
@@ -118,13 +124,13 @@
             margin-right: r(4);
           }
           .icon-warranty {
-            @include bg-image('icon-warranty');
+            // @include bg-image('icon-warranty');
           }
           .icon-tax {
-            @include bg-image('icon-tax');
+            // @include bg-image('icon-tax');
           }
           .icon-payment {
-            @include bg-image('icon-payment');
+            // @include bg-image('icon-payment');
           }
           .pop-wrap {
             display: none;
@@ -214,13 +220,13 @@
            margin-right: 4px;
          }
          .icon-warranty{
-           @include bg-image('icon-warranty');
+          //  @include bg-image('icon-warranty');
          }
          .icon-tax{
-           @include bg-image('icon-tax');
+          //  @include bg-image('icon-tax');
          }
          .icon-payment{
-           @include bg-image('icon-payment');
+          //  @include bg-image('icon-payment');
          }
          &:hover{
            .pop-wrap{
@@ -270,7 +276,7 @@
              display: block;
              width: 216px;
              height: 16px;
-             background: url("~asset/images/wap/icon-service-payment@2x.png") no-repeat center 100%/100%;
+            //  background: url("~asset/images/wap/icon-service-payment@2x.png") no-repeat center 100%/100%;
            }
            a{
              color: #1BA1DB;
