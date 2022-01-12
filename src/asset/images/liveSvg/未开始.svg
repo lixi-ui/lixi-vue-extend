@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>未开始</title>
+    <defs>
+        <linearGradient x1="11.2958835%" y1="13.8934999%" x2="85.5580882%" y2="88.4385355%" id="linearGradient-1">
+            <stop stop-color="#DBDBDB" offset="0%"></stop>
+            <stop stop-color="#CCCCCC" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="--" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="直播列表" transform="translate(-970.000000, -251.000000)">
+            <g id="编组-6备份-2" transform="translate(946.000000, 179.000000)">
+                <g id="未开始" transform="translate(24.000000, 72.000000)">
+                    <circle id="椭圆形" fill="url(#linearGradient-1)" cx="9" cy="9" r="9"></circle>
+                    <path d="M14,9.12643678 C14,9.74712644 13.4137931,10.2528736 12.6781609,10.2528736 L6.32183908,10.2528736 C5.59770115,10.2528736 5,9.74712644 5,9.12643678 C5,8.50574713 5.5862069,8 6.32183908,8 L12.6896552,8 C13.4137931,8 14,8.50574713 14,9.12643678 Z" id="形状" fill="#FFFFFF" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

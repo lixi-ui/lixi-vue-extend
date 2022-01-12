@@ -4,14 +4,20 @@ import Button from './components/button/package/index.ts';
 import Loading from './components/Loading/src/index.ts';
 import checkbox from './components/checkbox//src/index.ts';
 import europeWarranty from './components/europe-warranty/src/index.ts';
+import FloatContactShopper from './components/float-contact-shopper/src/index.ts';
+import Image from './components/image/src/index.ts';
 
 import locale from 'g-ui/src/locale/index';
+
+import './utils/framework/vue/plugin/lazyload.js';
 
 const components = [
   Button,
   Loading,
   checkbox,
-  europeWarranty
+  europeWarranty,
+  FloatContactShopper,
+  Image
 ];
 
 const install = function(Vue, opts = {}) {

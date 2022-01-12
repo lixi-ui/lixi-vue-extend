@@ -1,0 +1,197 @@
+.van-cell{
+  &.focusInput{
+    .van-field__body{
+      border: 1px solid #FF6B48!important;
+      box-shadow: r(0) r(0) r(4) r(0) #FF6B48;
+      margin-bottom: r(4);
+    }
+  }
+  &.err {
+    .van-field__body{
+      border-color: $errColor!important;;
+      box-shadow:none;
+      margin-bottom: r(0);
+    }
+  }
+  .van-field__error-message{
+    color: $errColor!important;;
+  }
+}
+.van-checkbox {
+  display: flex;
+  font-size: r(12);
+  .van-checkbox__icon--checked {
+    .van-icon {
+      background-color: $mainColor;
+      border-color: $mainColor;
+    }
+  }
+  .van-icon {
+    transform: scale(.8);
+    border-radius: r(2);
+    border-color: #979797;
+  }
+  .van-checkbox__label {
+    font-size: r(12);
+    color: #282828;
+    line-height: r(20);
+  }
+}
+.picker-box {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 2003;
+  .van-picker__toolbar{
+    font-size: r(15);
+  }
+}
+.van-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2002;
+}
+.van-dialog{
+  font-size: r(16);
+  border-radius: r(4);
+  .van-dialog__header {
+    padding: 25px 0 0 0;
+    text-align: center;
+  }
+  .van-dialog__message--has-title {
+    color: #999;
+    font-size: r(14);
+  }
+  .van-dialog__message {
+    line-height: 1.5;
+    padding: r(15) r(20);
+  }
+  .van-dialog__confirm, .van-dialog__confirm:active {
+    color: $mainColor;
+  }
+  .van-button {
+    height: r(44);
+    line-height: r(42);
+    border-radius: r(3);
+    font-size: r(16);
+  }
+}
+.van-toast {
+  font-size: r(12);
+  &.van-toast--text {
+    padding: r(12);
+    min-width: r(220);
+    word-break: keep-all;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+  }
+}
+.van-rate {
+  display: inline-block;
+  .van-rate__item {
+    width: r(17) !important;
+    height: r(17);
+    padding: 0;
+    fill: #FEC225 !important;
+  }
+}
+.van-button, .van-tab {
+}
+
+@media only screen and (min-width: 1024px) {
+  .van-dialog {
+    max-width: 400px;
+  }
+  .van-rate {
+    display: inline-block;
+    .van-rate__item {
+      width: 18px !important;
+      height: 18px;
+    }
+  }
+  .van-cell {
+    .van-field__clear {
+      display: none;
+    }
+  }
+  .van-dialog {
+    width: 308px;
+    padding: 32px;
+    height: max-content;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transform: translate3d(0, 0, 0);
+    .van-dialog__header {
+      padding: 0;
+      font-size: 17px;
+    }
+    .van-dialog__message {
+      font-size: 14px;
+      padding: 20px;
+      color: #666666;
+    }
+    .van-dialog__footer {
+      /*position: absolute;
+      bottom: 8px;
+      right: 24px;*/
+      display: flex;
+      justify-content: center;
+      &.van-hairline--top {
+        &::after {
+          border: 0 none;
+        }
+      }
+      .van-button {
+        flex: none;
+        border: 0 none !important;
+        width: 76px;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        font-size: 14px;
+        color: #666666;
+        border-radius: 4px;
+        &.van-dialog__confirm {
+          color: $mainColor;
+          &:hover {
+            background-color: $mainColor;
+            color: #ffffff;
+          }
+        }
+        &.van-hairline--left {
+          &::after {
+            border: 0 none;
+          }
+        }
+        &:hover {
+          background-color: rgba(153, 153, 153, .22);
+          color: #333333;
+        }
+      }
+    }
+  }
+  .van-pagination .van-pagination__prev, .van-pagination .van-pagination__next{
+    width: 120px;
+  }
+}
+/* firefox 弹窗兼容 */
+@-moz-document url-prefix() {
+  @media only screen and (min-width: 1024px) {
+    .van-dialog{
+      left: 50%;
+      right: auto;
+      top: 50%;
+      bottom: auto;
+      margin: 0;
+      transform: translate3d(-50%, -50%, 0);
+    }
+  }
+}

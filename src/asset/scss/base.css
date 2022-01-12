@@ -1,0 +1,259 @@
+a {
+  text-decoration: none;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  -webkit-text-fill-color: #333;
+}
+
+.el-input__inner:focus {
+  border-color: #67c23a !important;
+}
+
+.common-container {
+  padding: 30px 0;
+}
+
+.el-checkbox__input.is-checked + .el-checkbox__label {
+  color: #666666;
+}
+
+.el-pagination {
+  margin-top: 25px;
+  float: right;
+}
+
+.el-pagination li,
+.el-pagination button {
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  margin: 0px 4px;
+  height: 32px;
+  line-height: 32px;
+  width: 48px;
+}
+
+.el-pagination button.btn-prev,
+.el-pagination button.btn-next {
+  padding: 0px 6px;
+  margin: 0px 4px;
+}
+
+.el-pagination button.btn-prev i:before i,
+.el-pagination button.btn-next i:before i {
+  font-size: 16px !important;
+}
+
+.el-pagination li.number {
+  font-size: 13px;
+  color: #282828;
+}
+
+.el-pagination li.el-icon-more {
+  border: none;
+}
+
+.el-pagination li.el-icon-more:hover,
+.el-pagination li.btn-quicknext:hover {
+  border: none;
+}
+
+.el-pagination li.el-icon-more:before {
+  line-height: 32px;
+}
+
+.el-pagination .el-pager li.active + li {
+  border: 1px solid #cccccc;
+}
+
+.el-pagination .number.active {
+  background: #FF6B48;
+  border-color: #FF6B48;
+  color: #ffffff;
+}
+
+.go-btn {
+  margin-top: 26px;
+  float: right;
+  background: #ff6b48;
+  border-radius: 4px;
+  height: 32px;
+  width: 56px;
+  color: #ffffff;
+  line-height: 32px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.el-pager li.btn-quicknext,
+.el-pager li.btn-quickprev {
+  line-height: 32px;
+}
+
+.el-pagination .btn-prev .el-icon,
+.el-pagination .btn-next .el-icon {
+  font-size: 14px;
+}
+
+.el-icon.btn-quicknext {
+  font-size: 14px !important;
+}
+
+.el-input.el-pagination__editor,
+.el-pagination__jump {
+  height: 32px !important;
+}
+
+.el-input.el-pagination__editor input,
+.el-pagination__jump input {
+  height: 32px !important;
+}
+
+.center {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.totalWarp .top_container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1600px) {
+  .common-container {
+    padding: 30px 40px !important;
+  }
+  body .filter-items {
+    margin-right: 60px;
+  }
+  body .el-slider {
+    width: 200px;
+  }
+  body .logo {
+    width: 200px;
+    margin: 32px 80px;
+  }
+  body .tools-content {
+    margin-left: 60px;
+    margin-right: 40px;
+  }
+  body .top_container .home-container {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  body .tools-list > div {
+    margin: 0px 15px;
+  }
+  body .sort-item .el-radio-group {
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .common-container {
+    padding: 30px 30px !important;
+  }
+  body .filter-items {
+    margin-right: 30px;
+  }
+  body .el-slider {
+    width: 150px;
+  }
+  body .logo {
+    width: 200px;
+    margin: 32px 60px;
+  }
+  body .tools-content {
+    margin-left: 40px;
+    margin-right: 30px;
+  }
+  body .top_container .home-container {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  body .tools-list > div {
+    margin: 0px 10px;
+  }
+  body .rec-main-container {
+    margin-top: 24px;
+  }
+  body .sort-item .el-radio-group {
+    margin-right: 20px;
+  }
+}
+
+.el-message-box {
+}
+
+img {
+  opacity: 0;
+  animation-name: fadein;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+  animation-timing-function: ease-out;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+img [lazy='loaded'] {
+  opacity: 0;
+  animation-name: fadein;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+  animation-timing-function: ease-out;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.el-radio-button:focus:not(.is-focus):not(:active) {
+  box-shadow: none;
+}
+
+.el-pagination button.btn-prev, .el-pagination button.btn-next {
+  width: 110px;
+  font-size: 14px;
+  line-height: 32px;
+  border: 1px solid #FF5224;
+  color: #FF5224;
+}
+
+.el-pagination button.btn-prev span, .el-pagination button.btn-next span {
+  height: 32px;
+  line-height: 32px;
+}
+
+.price-filter-item input {
+  font-size: 12px;
+}
+
+button.btn-prev:disabled, button.btn-next:disabled {
+  font-size: 14px;
+  color: #999999  !important;
+  background: #ffffff  !important;
+  border: 1px solid #cccccc !important;
+}
+
+button.btn-prev:hover, button.btn-next:hover {
+  font-size: 14px;
+  background: #FF5224;
+  color: #ffffff;
+}

@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueLazyload from 'vue-lazyload';
-import defaultImg from 'asset/images/default.png';
+import defaultImg from 'src/asset/images/default.png';
 
 Vue.use(VueLazyload, {
   preLoad: 1.2, // 预加载高度比例

@@ -76,7 +76,7 @@
     },
     computed: {
       isMobile() {
-        return true;
+        return false;
       }
     },
     mounted() {

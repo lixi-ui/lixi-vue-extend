@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Gshopper Shop Beyond Borders - 中秋聚惠</title>
+  <meta name="keywords">
+  <meta name="description">
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <script src="https://ws.izenecdn.com/st/public/js/flexible.min.1026.js"></script>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="/normalizes.css">
+  <link rel="stylesheet" href="/static/css/autumn.css">
+</head>
+<body>
+<div class="container">
+  <div class="banner"></div>
+  <div class="tab-bar-mobile">
+    <div class="tab-item active" onclick="linkFloor('1')" name="floorNav1">
+      <span>热卖爆款半价购</span>
+    </div>
+    <div class="tab-item" onclick="linkFloor('2')" name="floorNav2">
+      <span>中秋好礼推荐</span>
+    </div>
+    <div class="tab-item" onclick="linkFloor('3')" name="floorNav3">
+      <span>人气商品低价购</span>
+    </div>
+  </div>
+  <div class="layer-wrap">
+    <div class="layer">
+      <p class="floor-title-1"></p>
+      <ul class="goods-list">
+        <li class="goods-item" onclick="toProductDetail('3000007527', '5000018571')">
+          <div class="goods-box goods-bg-1"></div>
+        </li>
+        <li class="goods-item" onclick="toProductDetail('3000012940', '5000053631')">
+          <div class="goods-box goods-bg-2"></div>
+        </li>
+        <li class="goods-item" onclick="toProductDetail('3000007864', '5000018910')">
+          <div class="goods-box goods-bg-3"></div>
+        </li>
+      </ul>
+      <p class="floor-title-2"></p>
+      <ul class="recommend-list">
+        <li class="recommend-item">
+          <div class="recommend-box recommend-bg-1">
+            <div class="recommend-link" onclick="toProductDetail('3000010693', '5000030354')"></div>
+          </div>
+        </li>
+        <li class="recommend-item">
+          <div class="recommend-box recommend-bg-2">
+            <div class="recommend-link" onclick="toProductDetail('3000010345', '5000028576')"></div>
+          </div>
+        </li>
+        <li class="recommend-item">
+          <div class="recommend-box recommend-bg-3">
+            <div class="recommend-link" onclick="toProductDetail('81355983', '8135598301')"></div>
+          </div>
+        </li>
+      </ul>
+      <p class="floor-title-3"></p>
+      <ul class="floor-good-list" id="goodsList">
+        <!-- <li class="good-item" onclick="toProductDetail()">
+          <div class="good-wrap">
+            <div class="img-wrap">
+              <img src="https://ws.izenecdn.com/shopnc/goods/32/32_161735185474529485.jpeg" alt="">
+              <div class="discount-label" v-if="good.discount">
+                <p class="discount-num">{{ `${good.discount}%` }}</p>
+                <p class="label">OFF</p>
+              </div>
+            </div>
+            <div class="good-right">
+              <p class="good-name" title="">ORIGINS 悦木之源 灵芝焕能精华水 菌菇水</p>
+              <div class="price-buy">
+                <div class="price">
+                  <div>
+                    <span class="currency">¥</span>
+                    <span class="real">104.00</span>
+                  </div>
+                  <div class="sale">¥179.00</div>
+                </div>
+                <i class="icon-cart"></i>
+              </div>
+            </div>
+          </div>
+        </li> -->
+      </ul>
+    </div>
+    <div class="floor-nav-wrap">
+      <div class="floor-nav">
+        <ul>
+          <li class="active" onclick="linkFloor('1')" name="floorNav1">热卖爆款半价购</li>
+          <li onclick="linkFloor('2')" name="floorNav2">中秋好礼推荐</li>
+          <li onclick="linkFloor('3')" name="floorNav3">人气商品低价购</li>
+        </ul>
+        <div class="nav-back-top" @click="linkTop"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script src="/static/js/utils.js"></script>
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/autumn.js"></script>
+<!-- 埋点代码 -->
+<script>
+  var statUrl = location.origin === 'https://www.gshopper.com' ? 'https://static-web.gshopper.com/tongji/stat4.min.js' : 'http://stage-static-web.gshopper.com/tongji/stat4.min.js';
+  const gpElement = document.createElement('script');
+  const dateVersion = new Date().toLocaleDateString().replace(/\//g, '');
+  gpElement.src = statUrl + '?v=' + dateVersion;
+  gpElement.async = true;
+  document.head.appendChild(gpElement);
+</script>
+<!-- android连接桥 -->
+<script>
+  var obj = qsToobj();
+  if (obj.clientType === 'android') {
+    addAsyncJavaScript('/static/js/WebViewJavascriptBridge.js');
+  }
+</script>
+<script>
+  function setupWebViewJavascriptBridge(callback) {
+    if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+    if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+    window.WVJBCallbacks = [callback];
+    var WVJBIframe = document.createElement('iframe');
+    WVJBIframe.style.display = 'none';
+    WVJBIframe.src = 'https://__bridge_loaded__';
+    document.documentElement.appendChild(WVJBIframe);
+    setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+  }
+</script>
+<!-- 业务脚本 -->
+<script>
+  $(function(){
+    var ele = '';
+    for (var i = 0; i < goodsList.length; i++) {
+      var item = goodsList[i];
+      ele += "<li class=\"good-item\" onclick=\"toProductDetail(" + item.spuId + ", " + item.skuId + ")\"><div class=\"good-wrap\"><div class=\"img-wrap\"><img src=\"" + item.thumbnail + "\" alt=\"\"><div class=\"discount-label\"><p class=\"discount-num\">" + item.discount + "</p><p class=\"label\">OFF</p></div></div><div class=\"good-right\"><p class=\"good-name\" title=\"" + item.name + "\">" + item.name + "</p><div class=\"price-buy\"><div class=\"price\"><div><span class=\"real\">" + item.realPrice + "</span></div><div class=\"sale\">" + item.salePrice + "</div></div><i class=\"icon-cart\"></i></div></div></div></li>";
+    }
+    $('#goodsList').append(ele);
+  });
+  function linkFloor(id) {
+    $("[name^='floorNav']").removeClass('active');
+    var offsetTop = $('.floor-title-' + id).offset().top;
+    var floorName = 'floorNav' + id;
+    $("[name='" + floorName + "']").addClass('active');
+    $('html, body').animate({
+      scrollTop: offsetTop
+    });
+  }
+  var obj = qsToobj();
+  function toProductDetail(spuId, skuId) {
+    if (obj.clientType === 'android') {
+      toNativeAndroid({
+        spuId: spuId,
+        skuId: skuId
+      })
+    } else if (obj.clientType === 'ios') {
+      toNativeIos({
+        spuId: spuId,
+        skuId: skuId
+      })
+    } else {
+      location.href = 'https://www.gshopper.com/product/detail/' + spuId + '?skuId=' + skuId;
+    }
+  }
+  function toNativeAndroid(params) {
+    window.WebViewJavascriptBridge.callHandler('app_check_product_detail', {
+      spuId: params.spuId,
+      skuId: params.skuId,
+    }, function(responseData) {
+    });
+    function connectWebViewJavascriptBridge(callback) {
+      if (window.WebViewJavascriptBridge) {
+        callback(WebViewJavascriptBridge);
+      } else {
+        document.addEventListener('WebViewJavascriptBridgeReady', function() {
+          callback(WebViewJavascriptBridge);
+        }, false);
+      }
+    }
+    connectWebViewJavascriptBridge(function(bridge) {
+      bridge.init(function(message, responseCallback) {
+        var data = {
+          'Javascript Responds': 'Wee!'
+        };
+        responseCallback(data);
+      });
+      bridge.registerHandler('app_check_product_detail', function(data, responseCallback) {
+        responseCallback(responseData);
+      });
+    });
+  }
+  function toNativeIos(params) {
+    setupWebViewJavascriptBridge(function(bridge) {
+      bridge.registerHandler('JS Echo', function(data, responseCallback) {
+        responseCallback(data);
+      });
+      bridge.callHandler('app_check_product_detail', {
+        spuId: params.spuId,
+        skuId: params.skuId,
+      }, function responseCallback(responseData) {
+        this.setState(state => ({
+          callbackResult: responseData
+        }));
+      });
+    });
+  }
+</script>
+</html>
