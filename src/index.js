@@ -6,6 +6,8 @@ import checkbox from './components/checkbox//src/index.ts';
 import europeWarranty from './components/europe-warranty/src/index.ts';
 import FloatContactShopper from './components/float-contact-shopper/src/index.ts';
 import Image from './components/image/src/index.ts';
+import GButton from './components/g-button/src/index.ts';
+import GInput from './components/input/src/index.ts';
 
 import locale from 'g-ui/src/locale/index';
 
@@ -17,7 +19,9 @@ const components = [
   checkbox,
   europeWarranty,
   FloatContactShopper,
-  Image
+  Image,
+  GButton,
+  GInput
 ];
 
 const install = function(Vue, opts = {}) {

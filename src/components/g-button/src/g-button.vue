@@ -44,7 +44,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '~asset/scss/common.scss';
+  @import '/src/asset/scss/common.scss';
   $disabledBg: #ECECEC;
   $disabledFont: #BBBBBB;
 

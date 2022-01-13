@@ -1,13 +1,13 @@
 <template>
   <div class="gp-pagination">
     <el-pagination
-            background
-            layout="prev, pager, next"
-            :pager-count="5"
-            :current-page="page"
-            :page-size="pageSize"
-            :total="total"
-            @current-change="currentChange">
+      background
+      layout="prev, pager, next"
+      :pager-count="5"
+      :current-page="page"
+      :page-size="pageSize"
+      :total="total"
+      @current-change="currentChange">
     </el-pagination>
   </div>
 </template>

@@ -6,16 +6,16 @@
     ]">
     <div class="g-input-box">
       <input ref="input"
-             class="g-input-control"
-             v-bind="$attrs"
-             :type="type"
-             :value="nativeInputValue"
-             :disabled="disabled"
-             :readonly="readonly"
-             :autocomplete="autocomplete"
-             @input="handleInput"
-             @focus="handleFocus"
-             @blur="handleBlur">
+        class="g-input-control"
+        v-bind="$attrs"
+        :type="type"
+        :value="nativeInputValue"
+        :disabled="disabled"
+        :readonly="readonly"
+        :autocomplete="autocomplete"
+        @input="handleInput"
+        @focus="handleFocus"
+        @blur="handleBlur">
     </div>
     <span class="g-placeholder">{{ placeholder }}</span>
   </div>
@@ -85,7 +85,7 @@
 </script>
 
 <style scoped lang="scss">
-  @import '~asset/scss/common.scss';
+  @import '/src/asset/scss/common.scss';
   @media only screen and (max-width: 1023px) {
     .g-input-components {
       position: relative;

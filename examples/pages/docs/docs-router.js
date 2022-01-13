@@ -5,6 +5,8 @@ import Checkbox from 'g-ui/src/components/checkbox/doc/index.vue';
 import EuropeWarranty from 'g-ui/src/components/europe-warranty/doc/index.vue';
 import FloatContactShopper from 'g-ui/src/components/float-contact-shopper/doc/index.vue';
 import Image from 'g-ui/src/components/image/doc/index.vue';
+import Button from 'g-ui/src/components/g-button/doc/index.vue';
+import Input from 'g-ui/src/components/input/doc/index.vue';
 
 const router = [
   {
@@ -55,6 +57,20 @@ const router = [
     urlPath: '/docs/image',
     title: '图像',
     component: Image
+  },
+  {
+    path: '/docs/button',
+    name: 'button',
+    urlPath: '/docs/button',
+    title: '按钮',
+    component: Button
+  },
+  {
+    path: '/docs/input',
+    name: 'input',
+    urlPath: '/docs/input',
+    title: '输入框',
+    component: Input
   }
 ]
 export default router;
