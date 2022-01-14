@@ -56,15 +56,15 @@ html, body {
 }
 @font-face {
   font-family: OpenSans;
-  src: url("~asset/font/Open_Sans.woff2");
+  src: url("src/asset/font/Open_Sans.woff2");
 }
 @font-face {
   font-family: NanumGothic;
-  src: url("~asset/font/NanumGothic.woff2");
+  src: url("src/asset/font/NanumGothic.woff2");
 }
 @font-face {
   font-family: IntegralNum;
-  src:url("~asset/font/D-DIN.woff2")
+  src:url("src/asset/font/D-DIN.woff2")
 }
 .cn-font{
   font-family: -apple-system,BlinkMacSystemFont,"PingFang SC",Helvetica Neue,"Hiragino Sans GB",Microsoft YaHei,Helvetica,sans-serif;
@@ -169,7 +169,7 @@ $baseWidthRate: 37.5; //如设计稿是750px的话，就是75
 
 // px转换为rem
 @function r($num) {
-  @return $num / $baseWidthRate+rem;
+  @return calc($num / $baseWidthRate) + rem;
 }
 
 //背景图片

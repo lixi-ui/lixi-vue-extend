@@ -169,7 +169,7 @@ $baseWidthRate: 37.5; //如设计稿是750px的话，就是75
 
 // px转换为rem
 @function r($num) {
-  @return $num / $baseWidthRate+rem;
+  @return calc($num / $baseWidthRate) + rem;
 }
 
 //背景图片

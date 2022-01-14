@@ -1,8 +1,8 @@
-import Gcheckbox from './checkbox.vue';
+import GWechatQrcode from './wechat-qrcode.vue';
 
 /* istanbul ignore next */
-Gcheckbox.install = function(Vue) {
-  Vue.component(Gcheckbox.name, Gcheckbox);
+GWechatQrcode.install = function(Vue: any) {
+  Vue.component(GWechatQrcode.name, GWechatQrcode);
 };
 
-export default Gcheckbox;
+export default GWechatQrcode;

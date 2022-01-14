@@ -43,7 +43,7 @@ $fontMini: 12px;
 }
 // px转换为rem
 @function r($num) {
-  @return $num / $baseWidthRate+rem;
+  @return calc($num / $baseWidthRate) + rem;
 }
 //背景图片
 @mixin bg-image($url) {

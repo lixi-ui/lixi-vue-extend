@@ -10,7 +10,7 @@
 
 <script>
   export default {
-    name: 'popover',
+    name: 'g-popover',
     props: ['isMobile'],
     data() {
       return {
@@ -35,7 +35,7 @@
 </script>
 
 <style scoped lang="scss">
-  @import "~asset/scss/common.scss";
+  @import "src/asset/scss/common.scss";
   @media only screen and (max-width: 1023px) {
     .popover-container{
       position: relative;
@@ -43,7 +43,7 @@
         display: block;
         width: r(12);
         height: r(12);
-        background-image: url("~asset/images/wap/icon-popover.png");
+        background-image: url("src/asset/images/wap/icon-popover.png");
         background-size: 100%;
       }
       .popover-content{
@@ -98,7 +98,7 @@
         display: block;
         width: 12px;
         height: 12px;
-        background-image: url("~asset/images/wap/icon-popover.png");
+        background-image: url("src/asset/images/wap/icon-popover.png");
         background-size: 100%;
       }
       .popover-content{

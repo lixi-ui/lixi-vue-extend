@@ -8,6 +8,13 @@ import FloatContactShopper from './components/float-contact-shopper/src/index.ts
 import Image from './components/image/src/index.ts';
 import GButton from './components/g-button/src/index.ts';
 import GInput from './components/input/src/index.ts';
+import GGpPagination from './components/gp-pagination/src/index.ts';
+import GPopover from './components/popover/src/index.ts';
+import GPreviewImages from './components/preview-images/src/index.ts';
+import GSearch from './components/search/src/index.ts';
+import GStep from './components/step/src/index.ts';
+import GWechatQrcode from './components/wechat-qrcode/src/index.ts';
+import GZoomImage from './components/zoom-image/src/index.ts';
 
 import locale from 'g-ui/src/locale/index';
 
@@ -21,7 +28,14 @@ const components = [
   FloatContactShopper,
   Image,
   GButton,
-  GInput
+  GInput,
+  GGpPagination,
+  GPopover,
+  GPreviewImages,
+  GSearch,
+  GStep,
+  GWechatQrcode,
+  GZoomImage
 ];
 
 const install = function(Vue, opts = {}) {

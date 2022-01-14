@@ -1,8 +1,8 @@
-import Gcheckbox from './checkbox.vue';
+import GStep from './step.vue';
 
 /* istanbul ignore next */
-Gcheckbox.install = function(Vue) {
-  Vue.component(Gcheckbox.name, Gcheckbox);
+GStep.install = function(Vue: any) {
+  Vue.component(GStep.name, GStep);
 };
 
-export default Gcheckbox;
+export default GStep;

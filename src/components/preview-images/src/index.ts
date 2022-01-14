@@ -1,8 +1,8 @@
-import Gcheckbox from './checkbox.vue';
+import GPreviewImages from './preview-images.vue';
 
 /* istanbul ignore next */
-Gcheckbox.install = function(Vue) {
-  Vue.component(Gcheckbox.name, Gcheckbox);
+GPreviewImages.install = function(Vue: any) {
+  Vue.component(GPreviewImages.name, GPreviewImages);
 };
 
-export default Gcheckbox;
+export default GPreviewImages;

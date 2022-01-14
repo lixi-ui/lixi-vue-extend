@@ -5,7 +5,7 @@
         <van-search
           ref="vanSearch"
           v-model="searchValue"
-          :placeholder="$lang.search"
+          placeholder="搜索"
           @search="onSearch"
           @cancel="onCancel"
         />
@@ -16,10 +16,14 @@
 </template>
 
 <script>
-import { debounce } from "framework/utils/utils";
+import { debounce } from "/src/utils/framework/utils/utils";
+import { Search } from "vant";
 
 export default {
-  name: "search",
+  name: "g-search",
+  components: {
+    VanSearch: Search
+  },
   props: {
     isFocus: {
       type: Boolean,
@@ -32,16 +36,17 @@ export default {
   },
   computed: {
     show() {
-      if (EASY_ENV_IS_BROWSER) {
-        const url = window.location.pathname;
-        if (url.indexOf("/toSearch") > -1) {
-          return false;
-        } else {
-          return true;
-        }
-      } else {
-        return true;
-      }
+      // if (EASY_ENV_IS_BROWSER) {
+      //   const url = window.location.pathname;
+      //   if (url.indexOf("/toSearch") > -1) {
+      //     return false;
+      //   } else {
+      //     return true;
+      //   }
+      // } else {
+      //   return true;
+      // }
+      return true;
     }
   },
   data() {
@@ -78,7 +83,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "~asset/scss/base.scss";
+@import "src/asset/scss/base.scss";
 @media only screen and (max-width: 1023px) {
   .searchBox {
     width: 100%;

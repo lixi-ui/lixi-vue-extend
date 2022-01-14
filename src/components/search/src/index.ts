@@ -1,8 +1,8 @@
-import Gcheckbox from './checkbox.vue';
+import GSearch from './search.vue';
 
 /* istanbul ignore next */
-Gcheckbox.install = function(Vue) {
-  Vue.component(Gcheckbox.name, Gcheckbox);
+GSearch.install = function(Vue) {
+  Vue.component(GSearch.name, GSearch);
 };
 
-export default Gcheckbox;
+export default GSearch;

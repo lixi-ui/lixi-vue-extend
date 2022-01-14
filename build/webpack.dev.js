@@ -127,7 +127,7 @@ var config = {
         ]
       },
       {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        test: /\.(png|jpe?g|gif|svg|ttf|woff|woff2)(\?.*)?$/,
         loader: 'url-loader',
         options: {
           limit: 10,

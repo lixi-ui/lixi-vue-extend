@@ -1,8 +1,8 @@
-import Gcheckbox from './checkbox.vue';
+import GPopover from './popover.vue';
 
 /* istanbul ignore next */
-Gcheckbox.install = function(Vue) {
-  Vue.component(Gcheckbox.name, Gcheckbox);
+GPopover.install = function(Vue: any) {
+  Vue.component(GPopover.name, GPopover);
 };
 
-export default Gcheckbox;
+export default GPopover;

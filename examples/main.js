@@ -16,6 +16,7 @@ import webLocale from 'examples/locale/index.js'
 import '../src/style/src/index.scss';
 import './style/index.scss';
 import 'vant/lib/vant-css/index.css';
+import 'element-ui/lib/theme-chalk/index.css';
 
 import Lxv from "../src//index.js";
 

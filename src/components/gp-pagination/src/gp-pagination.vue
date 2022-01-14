@@ -13,8 +13,12 @@
 </template>
 
 <script>
+  import { Pagination } from 'element-ui';
   export default {
-    name: 'gp-pagination',
+    name: 'g-gp-pagination',
+    components: {
+      ElPagination: Pagination
+    },
     props: {
       layout: {
         type: String,
@@ -46,11 +50,11 @@
 </script>
 
 <style scoped lang="scss">
-  @import '~asset/scss/common.scss';
+  @import 'src/asset/scss/common.scss';
   @media only screen and (max-width: 1023px) {
     .gp-pagination{
       text-align: right;
-      /deep/ .el-pagination{
+      ::v-deep .el-pagination{
         padding: 0;
         .btn-prev, .btn-next, .el-pager li{
           font-size: r(13);
@@ -75,7 +79,7 @@
   @media only screen and (min-width: 1024px) {
     .gp-pagination {
       text-align: right;
-      /deep/ .el-pagination{
+      ::v-deep .el-pagination{
         padding: 0;
         .btn-prev, .btn-next, .el-pager li{
           font-size: 13px;

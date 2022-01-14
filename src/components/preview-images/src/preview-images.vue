@@ -27,7 +27,10 @@
 <script>
   import { ImagePreview } from 'vant';
   export default {
-    name: 'previewImages',
+    name: 'g-preview-images',
+    components: {
+      VanImagePreview: ImagePreview
+    },
     props: {
       images: {
         type: Array,
@@ -84,7 +87,7 @@
 </script>
 
 <style scoped lang="scss">
-  @import "~asset/scss/base.scss";
+  @import "src/asset/scss/base.scss";
   @media only screen and (max-width: 1023px) {
     .preview-image-pc{
       display: none;

@@ -7,6 +7,13 @@ import FloatContactShopper from 'g-ui/src/components/float-contact-shopper/doc/i
 import Image from 'g-ui/src/components/image/doc/index.vue';
 import Button from 'g-ui/src/components/g-button/doc/index.vue';
 import Input from 'g-ui/src/components/input/doc/index.vue';
+import GpPagination from 'g-ui/src/components/gp-pagination/doc/index.vue';
+import GPopover from 'g-ui/src/components/popover/doc/index.vue';
+import GPreviewImages from 'g-ui/src/components/preview-images/doc/index.vue';
+import GSearch from 'g-ui/src/components/search/doc/index.vue';
+import GStep from 'g-ui/src/components/step/doc/index.vue';
+import GWechatQrcode from 'g-ui/src/components/wechat-qrcode/doc/index.vue';
+import GZoomImage from 'g-ui/src/components/zoom-image/doc/index.vue';
 
 const router = [
   {
@@ -71,6 +78,55 @@ const router = [
     urlPath: '/docs/input',
     title: '输入框',
     component: Input
+  },
+  {
+    path: '/docs/gp-pagination',
+    name: 'gpPagination',
+    urlPath: '/docs/gp-pagination',
+    title: '分页',
+    component: GpPagination
+  },
+  {
+    path: '/docs/popover',
+    name: 'popover',
+    urlPath: '/docs/popover',
+    title: '弹出',
+    component: GPopover
+  },
+  {
+    path: '/docs/preview-images',
+    name: 'previewImages',
+    urlPath: '/docs/preview-images',
+    title: '预览图片',
+    component: GPreviewImages
+  },
+  {
+    path: '/docs/search',
+    name: 'search',
+    urlPath: '/docs/search',
+    title: '搜索',
+    component: GSearch
+  },
+  {
+    path: '/docs/step',
+    name: 'step',
+    urlPath: '/docs/step',
+    title: '步骤',
+    component: GStep
+  },
+  {
+    path: '/docs/wechat-qrcode',
+    name: 'wechat-qrcode',
+    urlPath: '/docs/wechat-qrcode',
+    title: '二维码',
+    component: GWechatQrcode
+  },
+  {
+    path: '/docs/zoom-image',
+    name: 'zoom-image',
+    urlPath: '/docs/zoom-image',
+    title: '图片缩放',
+    component: GZoomImage
   }
 ]
 export default router;

@@ -1,8 +1,8 @@
-import Gcheckbox from './checkbox.vue';
+import GGpPagination from './gp-pagination.vue';
 
 /* istanbul ignore next */
-Gcheckbox.install = function(Vue) {
-  Vue.component(Gcheckbox.name, Gcheckbox);
+GGpPagination.install = function(Vue: any) {
+  Vue.component(GGpPagination.name, GGpPagination);
 };
 
-export default Gcheckbox;
+export default GGpPagination;

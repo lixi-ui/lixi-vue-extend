@@ -3,7 +3,9 @@
 :::demo
 ```html
 <div>
-  <g-checkbox :checked="check" disabled/>
+  <g-popover>
+    <span>弹出</span>
+  </g-popover>
 </div>
 <script>
   export default{

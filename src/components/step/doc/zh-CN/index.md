@@ -3,13 +3,22 @@
 :::demo
 ```html
 <div>
-  <g-checkbox :checked="check" disabled/>
+  <g-step :step="step"/>
+  <g-button @click="click">下一步</g-button>
 </div>
 <script>
   export default{
     data(){
       return {
-        check: true
+        step: 1
+      }
+    },
+    methods: {
+      click(){
+        this.step++
+        if(this.step == 4){
+          this.step = 1
+        }
       }
     }
   }

@@ -2,7 +2,7 @@
   <div class="zoom-image">
     <div class="zoom-image-container">
       <div class="zoom-image-close" @click="closeZoom">
-        <img src="~asset/images/wap/close-1@3x.png" alt="">
+        <img src="src/asset/images/wap/close-1@3x.png" alt="">
       </div>
       <div class="zoom-thumbnail">
         <ul class="thumbnail-list">
@@ -18,10 +18,10 @@
       </van-swipe>
       <div class="swipe-btns" v-show="!zoomState">
         <div class="swipe-btn btn-left" @click="changeIndex('left')">
-          <img src="~asset/images/right_normal.png" alt="">
+          <img src="src/asset/images/right_normal.png" alt="">
         </div>
         <div class="swipe-btn btn-right" @click="changeIndex('right')">
-          <img src="~asset/images/right_normal.png" alt="">
+          <img src="src/asset/images/right_normal.png" alt="">
         </div>
       </div>
       <div class="zoom-mobile" v-if="zoomMobile">
@@ -32,8 +32,13 @@
 </template>
 
 <script>
+import { Swipe, SwipeItem } from "vant";
 export default {
-  name: 'zoom-image',
+  name: 'g-zoom-image',
+  components: {
+    VanSwipe: Swipe,
+    VanSwipeItem: SwipeItem
+  },
   props: {
     imageList: {
       type: Array,
@@ -328,7 +333,7 @@ export default {
   }
 
   @media screen and (min-width: 1024px) {
-    /deep/ .van-swipe__track {
+    ::v-deep .van-swipe__track {
       transition-duration: 0ms !important;
     }
     .zoom-image {

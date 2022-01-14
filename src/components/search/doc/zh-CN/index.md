@@ -3,7 +3,7 @@
 :::demo
 ```html
 <div>
-  <g-checkbox :checked="check" disabled/>
+  <g-search/>
 </div>
 <script>
   export default{
