@@ -10,7 +10,7 @@ examples/lixi-ui
 
 server/public/lixi-ui
 server/public/dist
-
+server/public/*
 src/style/lib
 
 # Editor directories and files
