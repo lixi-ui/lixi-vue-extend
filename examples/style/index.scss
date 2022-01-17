@@ -89,3 +89,20 @@
     }
   }
 }
+
+.g-scroll{
+  &::-webkit-scrollbar {
+    width : 6px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background   : #fafafa;
+  }
+  &::-webkit-scrollbar-track {
+    // box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background: #fff;
+  }
+}

@@ -102,9 +102,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.home {
+  .home {
   width: 100%;
-  background: #ddd;
+  // background: #ddd;
   padding-top: 50px;
   .top{
     padding: 40px 40px 30px;
@@ -168,5 +168,5 @@ export default {
       }
     }
   }
-}
+  }
 </style>
