@@ -1,4 +1,4 @@
-import Introduce from './introduce/index';
+import Introduce from './introduce/doc/index';
 import Plan from './plan/index';
 import Loading from 'g-ui/src/components/loading/doc/index.vue';
 import Checkbox from 'g-ui/src/components/checkbox/doc/index.vue';

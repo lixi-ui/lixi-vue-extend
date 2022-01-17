@@ -1,7 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const webpackDevServer = require("webpack-dev-server");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugins = require('vue-loader/lib/plugin');
 
 var config = {
@@ -31,14 +29,10 @@ var config = {
     modules: ['node_modules'],
     alias: {
       'src': path.join(__dirname,'../src'),
-      'lixiv-ui':  path.join(__dirname,'../'),
+      'lixiv-ui':  path.join(__dirname, '../'),
+      'g-ui':  path.join(__dirname, '../'),
+      "examples": path.join(__dirname, '../examples')
     }
-  },
-  devServer: {
-    host: '0.0.0.0',
-    port: 8888,
-    publicPath: '/',
-    noInfo: true
   },
   module: {
     rules:[
@@ -106,7 +100,7 @@ var config = {
         ]
       },
       {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        test: /\.(png|jpe?g|gif|svg|ttf|woff|woff2)(\?.*)?$/,
         loader: 'url-loader',
         options: {
           limit: 10,
