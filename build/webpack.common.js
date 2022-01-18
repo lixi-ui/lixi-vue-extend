@@ -3,27 +3,18 @@ const webpack = require('webpack');
 const VueLoaderPlugins = require('vue-loader/lib/plugin');
 
 var config = {
-  mode: "production",
+  mode: "development",
   entry: {
     app: ['./src/index.js']
   },
   output: {
     path: path.resolve(process.cwd(), './lib'),
     publicPath: '/dist/',
-    filename: 'index.js',
+    filename: 'g-ui.common.js',
     chunkFilename: '[id].js',
-    libraryTarget: 'umd',
-    // libraryExport: 'default',
+    libraryExport: 'default',
     library: 'GUI',
-    umdNamedDefine: true,
-    globalObject: 'typeof self !== \'undefined\' ? self : this'
-    // path: path.resolve(process.cwd(), './lib'),
-    // publicPath: '/dist/',
-    // filename: 'index.js',
-    // chunkFilename: '[id].js',
-    // libraryTarget: 'umd',
-    // library: 'LIXI',
-    // umdNamedDefine: true
+    libraryTarget: 'commonjs2'
   },
   externals: {
     vue: {
