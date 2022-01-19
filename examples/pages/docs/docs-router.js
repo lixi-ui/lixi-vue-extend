@@ -1,4 +1,5 @@
 import Introduce from './introduce/doc/index';
+import Install from './install/doc/index';
 import Plan from './plan/index';
 import Loading from 'g-ui/src/components/loading/doc/index.vue';
 import Checkbox from 'g-ui/src/components/checkbox/doc/index.vue';
@@ -29,6 +30,13 @@ const router = [
     urlPath: '/docs/plan',
     title: '计划',
     component: Plan
+  },
+  {
+    path: '/docs/install',
+    name: 'install',
+    urlPath: '/docs/install',
+    title: '安装',
+    component: Install
   },
   {
     path: '/docs/loading',

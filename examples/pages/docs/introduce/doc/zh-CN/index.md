@@ -1,8 +1,17 @@
-### 介绍
+## 介绍
 
-#### 这是一个响应性宽假
+### 这是一个响应式框架
 
-#### 可以应用在大屏与移动端
+### 采用的框架是 vue2 版本。 与 sass@1.35.2 版本 这个是为了支持 webpack4 。 webpack4 版本。
+
+### 可以应用在大屏与移动端
+
+### 对比于当前的一些组件库来说，更像是兼容了多端。
+
+1. 项目中规定 1024px 使用的 单位为px。
+
+2. 1024 以下 使用的是 rem 作为单位。
+
 
 ```css
 @media only screen and (max-width: 1023px) {
@@ -12,34 +21,10 @@
 @media only screen and (min-width: 1024px) {
 }
 ```
-### 可以通过 npm install g-ui
 
 ### 内部使用的是 vant 与 element-ui 结合。
 
+1. 部分的组件是使用的是 vant 框架与 element-ui 框架。对组件的二次封装
 
-
-#### 简单的使用案例
-:::demo
-```html
-<div>
-  <g-checkbox :checked="check" disabled/>
-</div>
-<script>
-  export default{
-    data(){
-      return {
-        check: true
-      }
-    }
-  }
-</script>
-
-```
-:::
-
-### Attributes
-| 参数      | 说明          | 类型      | 可选值                           | 默认值  |
-|---------- |-------------- |---------- |--------------------------------  |-------- |
-| checked   | 选中          | boolean | — | false |
-| disabled  |  不可选       | boolean | — | false |
-
+### 这些组件是重业务逻辑抽离出来的组件。所以说跟业务逻辑是脱离关系的。是要做单元测试的，做单元测试，会是组件更加完善，更加健壮。
+### 单元测试暂时是没有. 考虑的因素是 由于使用项目中使用了第三方组件库，会极大的影响覆盖率的问题。

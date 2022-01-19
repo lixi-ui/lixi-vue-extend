@@ -181,6 +181,7 @@
       width: 200px;
       // padding-left: 20px;
       border-right: 1px solid lightblue;
+      background: #ccc;
       // background: lightgreen;
       
       .side-wrap{
