@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '../pages/home';
 import Docs from '../pages/docs';
 import docsRouter from 'examples/pages/docs/docs-router.js';
+import hljs from 'highlight.js';
 Vue.use(Router)
 
 
@@ -31,7 +32,20 @@ routes = routes.concat([{
   redirect: '/home'
 }])
 
-export default new Router({
+
+
+var router = new Router({
   mode: 'hash',
   routes: routes
 })
+
+router.afterEach(route => {
+  // https://github.com/highlightjs/highlight.js/issues/909#issuecomment-131686186
+  Vue.nextTick(() => {
+    const blocks = document.querySelectorAll('pre code:not(.hljs)');
+    Array.prototype.forEach.call(blocks, hljs.highlightBlock);
+  });
+})
+
+
+export default router;

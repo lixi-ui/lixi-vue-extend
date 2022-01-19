@@ -1,6 +1,11 @@
 <template>
   <div class="page-component">
     <g-loading :show="true"/>
+    <div class="hljs-test">
+      <html>
+        这是 html
+      </html>
+    </div>
   </div>
 </template>
 
@@ -9,7 +14,7 @@ import Vue from 'vue'
 import plan from './zh-CN/index.md'
 import planEs from './es/index.md'
 import Collection from '../../../../src/components/collection/index.vue'
-import Component from 'examples/pages/component.vue'
+import Component from 'examples/pages/component.vue';
 
 
 export default {
