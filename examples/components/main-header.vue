@@ -2,7 +2,6 @@
   <div class='main-header'>
     <div class="main-nav-left">
       <img src="./lixi-logo.png" />
-      Lixi.js
     </div>
     <div class="main-nav-right">
       <div class="nav-right">
@@ -159,8 +158,6 @@ export default {
 }
 </script>
 
-
-
 <style lang="scss" scoped>
   .main-header{
     display: flex;
@@ -168,11 +165,11 @@ export default {
     .main-nav-left{
       flex: none;
       width: 140px;
-      height: 2.2rem;
+      height: 58px;
       font-size: var(--font-size-h1);
       img{
-        height: 2.4rem;
-        width: 2.4rem;
+        height: 38px;
+        width: 38px;
         vertical-align: middle;
       }
     }

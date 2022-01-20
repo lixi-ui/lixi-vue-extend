@@ -117,10 +117,10 @@
   }
   .main-content{
     position: relative;
-    padding-top: 4rem;
+    padding-top: 58px;
     .main-side{
       position: fixed;
-      height: calc(100vh - 4rem);
+      height: calc(100vh - 58px);
       width: 200px;
       // padding-left: 20px;
       border-right: 1px solid lightblue;
@@ -157,13 +157,13 @@
       }
     }
     .main-cnt{
-      min-height: calc(100vh - 4rem - 1px);
+      min-height: calc(100vh - 58px - 1px);
       margin-bottom: 0px;
       position: relative;
       top: 0;
       bottom: 0;
       .md-cnt{
-        min-height: calc(100vh - 7.4rem - 2px);
+        min-height: calc(100vh - 108px - 2px);
         padding:20px 40px 0;
       }
     }
@@ -172,23 +172,25 @@
 
 @media only screen and (max-width: 1023px) {
   .show-side{
-    background: rgba(0,0,0,0.2);
     .main-side{
       display: block;
       position: absolute;
-      height: calc(100vh - 4rem);
+      height: calc(100vh - 58px);
       z-index: 1;
-      width: 200px;
+      width: 100%;
       // padding-left: 20px;
-      border-right: 1px solid lightblue;
-      background: #ccc;
+      
+      background: rgba(0,0,0,0.2);
       // background: lightgreen;
       
       .side-wrap{
         height: 100%;
         overflow: auto;
+        width: 400px;
+        border-right: 1px solid lightblue;
+        background: #f9f9f9;
         .side-group{
-          // margin-bottom: 10px;
+          margin-bottom: 10px;
           padding: 4px 10px 0px 20px;
           font-size: 16px;
           .title{
@@ -228,16 +230,16 @@
   }
   .main-content{
     position: relative;
-    padding-top: 4rem;
+    padding-top: 58px;
     .main-cnt{
       margin-left: 0px;
-      min-height: calc(100vh - 4rem - 1px);
+      min-height: calc(100vh - 58px - 1px);
       margin-bottom: 0px;
       position: relative;
       top: 0;
       bottom: 0;
       .md-cnt{
-        min-height: calc(100vh - 7.4rem - 2px);
+        min-height: calc(100vh - 108px - 2px);
         padding:0 40px;
       }
       
