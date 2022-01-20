@@ -4,6 +4,8 @@ $--color-primary: #fb6638;
 $--color-white: #fff;
 
 $--color-primary-light-5: mix($--color-white, $--color-primary, 50%) !default; /* a0cfff */
+$--color-primary-light-8: mix($--color-white, $--color-primary, 80%) !default; /* a0cfff */
+$--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default; /* a0cfff */
 
 $--text-color: #1f2f3d;
 $--text-color-5: mix($--color-white, $--color-primary, 50%) !default;
@@ -23,4 +25,6 @@ $--text-color-5: mix($--color-white, $--color-primary, 50%) !default;
   --font-size-h4:  20px;
   --primary-color: #{$--color-primary};
   --primary-color-5: #{$--color-primary-light-5};
+  --primary-color-8: #{$--color-primary-light-8};
+  --primary-color-9: #{$--color-primary-light-9};
 }

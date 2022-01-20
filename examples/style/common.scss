@@ -71,7 +71,8 @@ code.hljs {
     margin: 0;
   }
   ol{
-    background: #ecf8ff;
+    // background: var(--primary-color-9);
+    // background: lightgray;
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 20px;
@@ -161,5 +162,8 @@ code.hljs{
   font-size: 16px;
   .hljs-string{
     color: #89DDFF;
+  }
+  .hljs-keyword{
+    color: var(--primary-color);
   }
 }
