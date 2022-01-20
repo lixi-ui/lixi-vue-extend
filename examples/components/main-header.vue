@@ -191,6 +191,9 @@ export default {
             a{
               color: var(--text-color);
             }
+            .active{
+              color: var(--primary-color);
+            }
           }
         }
       }

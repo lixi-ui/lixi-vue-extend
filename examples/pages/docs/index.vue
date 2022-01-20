@@ -83,7 +83,7 @@ export default {
         table {
           border-collapse: collapse;
           width: 100%;
-          background-color: #fff;
+          background-color: #f9f9f9;
           font-size: 14px;
           margin-bottom: 45px;
           line-height: 1.5em;

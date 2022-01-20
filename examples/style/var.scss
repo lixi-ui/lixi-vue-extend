@@ -1,14 +1,26 @@
+@use "sass:math";
+
+$--color-primary: #fb6638;
+$--color-white: #fff;
+
+$--color-primary-light-5: mix($--color-white, $--color-primary, 50%) !default; /* a0cfff */
+
+$--text-color: #1f2f3d;
+$--text-color-5: mix($--color-white, $--color-primary, 50%) !default;
+
 
 :root {
   --font-sans: "Calibre";
   --font-mono: "Jetbrains Mono",monospace;
   --font-helvetica: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',SimSun,sans-serif;
   --background-color: #F9F9FA;
-  --text-color: #202223;
+  --text-color: #{$--text-color};
+  --text-color-5: #{$--text-color-5};
   --font-size:  16px;
   --font-size-h1:  32px;
   --font-size-h2:  28px;
   --font-size-h3:  24px;
   --font-size-h4:  20px;
-  --primary-color: #fb6638;
+  --primary-color: #{$--color-primary};
+  --primary-color-5: #{$--color-primary-light-5};
 }
