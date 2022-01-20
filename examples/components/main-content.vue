@@ -131,7 +131,7 @@
         overflow: auto;
         .side-group{
           // margin-bottom: 10px;
-          padding: 0px 10px 0px 20px;
+          padding: 4px 10px 0px 20px;
           font-size: 16px;
           .title{
             color: #333;
@@ -144,7 +144,7 @@
             padding: 3px 3px;
             display: inline-block;
             width: 100%;
-            color: #444;
+            color: var(--text-color);
             text-decoration: none;
             &:hover{
               color: #fb6638;
@@ -164,7 +164,7 @@
       bottom: 0;
       .md-cnt{
         min-height: calc(100vh - 7.4rem - 2px);
-        padding:0 20px;
+        padding:20px 40px 0;
       }
     }
   }
@@ -189,7 +189,7 @@
         overflow: auto;
         .side-group{
           // margin-bottom: 10px;
-          padding: 0px 10px 0px 20px;
+          padding: 4px 10px 0px 20px;
           font-size: 16px;
           .title{
             color: #333;
@@ -238,7 +238,7 @@
       bottom: 0;
       .md-cnt{
         min-height: calc(100vh - 7.4rem - 2px);
-        padding:0 20px;
+        padding:0 40px;
       }
       
     }

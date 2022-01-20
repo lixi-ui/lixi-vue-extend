@@ -18,6 +18,7 @@ import './style/index.scss';
 import './style/common.scss';
 import 'vant/lib/vant-css/index.css';
 import 'element-ui/lib/theme-chalk/index.css';
+import 'highlight.js/styles/github.css';
 
 import Lxv from "../src/index.js";
 

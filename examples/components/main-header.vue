@@ -167,8 +167,9 @@ export default {
     position: fixed;
     .main-nav-left{
       flex: none;
-      width: 110px;
+      width: 140px;
       height: 2.2rem;
+      font-size: var(--font-size-h1);
       img{
         height: 2.4rem;
         width: 2.4rem;
@@ -183,11 +184,13 @@ export default {
         float: right;
         padding-right: 10px;
         color: #409EFF;
-        font-size: 12px;
         .nav-right-wrap{
           display: flex;
           .nav-item{
             padding: 0 5px;
+            a{
+              color: var(--text-color);
+            }
           }
         }
       }
