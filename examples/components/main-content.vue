@@ -218,6 +218,8 @@
     }
     div.main-cnt{
       margin-left: 0px;
+      position: fixed;
+      width: 100%;
     }
   }
   .hide-side{

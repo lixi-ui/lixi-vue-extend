@@ -1,0 +1,99 @@
+.font-size-24{
+  font-size: var(--font-size-24);
+}
+.font-size-20{
+  font-size: var(--font-size-20);
+}
+.font-size-16{
+  font-size: var(--font-size-16);
+}
+.font-size-14{
+  font-size: var(--font-size-14);
+}
+.font-size-12{
+  font-size: var(--font-size-12);
+}
+.font-family-cn{
+  font-family: var(--font-family-cn)
+}
+.font-family-hk{
+  font-family: var(--font-family-hk)
+}
+
+
+.font-size-wrap{
+  padding: 10px 0;
+}
+
+.design-doc{
+  .design-doc-wrap{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .dc-color-item{
+      width: 20%;
+      min-height: 30px;
+      margin: 2%;
+      // background: #eee;
+      padding: 10px;
+      box-shadow: var(--shadow-1);
+      .dc-item-top{
+        background: var(--primary-color);
+        color: #fff;
+        padding: 10px;
+        .dc-item-top-1{
+          font-size: var(--font-size-24);
+        }
+        .dc-item-top-2{
+          font-size: var(--font-size-24);
+          line-height: 100px;
+          text-align: center;
+        }
+      }
+      .dc-item-top-02{
+        background: var(--secondary-color);
+      }
+      .dc-item-top-03{
+        background: var(--secondary-color-blue);
+      }
+      .dc-item-top-04{
+        background: var(--secondary-color-warning);
+      }
+      .dc-item-top-05{
+        background: var(--primary-linear-gradient);
+      }
+      .dc-item-top-06{
+        background: var(--secondary-linear-gradient);
+      }
+      .dc-item-top-07{
+        background: var(--secondary-base);
+        color: #666666;
+      }
+      .dc-item-top-08{
+        background: var(--cut-off-line);
+        color: #666666;
+      }
+      .dc-item-top-09{
+        background: var(--font-color);
+      }
+      .dc-item-top-10{
+        background: var(--font-color-primary);
+      }
+      .dc-item-top-11{
+        background: var(--font-color-secondary);
+      }
+      .dc-item-top-12{
+        background: var(--font-color-tip);
+      }
+      .dc-item-bottom{
+        text-align: center;
+        font-size: var(--font-size-20);
+        padding: 10px;
+        color: #666666;
+      }
+    }
+    .dc-color-item-shadow-2{
+      box-shadow: var(--shadow-2);
+    }
+  }
+}

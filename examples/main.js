@@ -16,7 +16,7 @@ import webLocale from 'examples/locale/index.js'
 import '../src/style/src/index.scss';
 import './style/index.scss';
 import './style/common.scss';
-import 'vant/lib/vant-css/index.css';
+import 'vant/lib/index.css';
 import 'element-ui/lib/theme-chalk/index.css';
 import 'highlight.js/styles/github.css';
 import './flexible.js';

@@ -2,9 +2,11 @@
 
 :::demo
 ```html
-<div>
-  <g-wechat-qrcode :checked="check" disabled/>
-</div>
+<template>
+  <div>
+    <g-wechat-qrcode :checked="check" disabled/>
+  </div>
+</template>
 <script>
   export default{
     data(){

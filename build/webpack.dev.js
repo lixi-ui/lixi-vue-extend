@@ -10,7 +10,7 @@ var config = {
     docs: path.resolve(process.cwd(), "./examples/main.js") 
   },
   output: {
-    path: path.resolve(process.cwd(), './examples/lixi-ui/'),
+    path: path.resolve(process.cwd(), './examples/g-ui/'),
     publicPath: '',
     filename: '[name].js',
     chunkFilename: '[name].js'
@@ -41,7 +41,7 @@ var config = {
   // output: {
   //   path: path.resolve(process.cwd(), './lib'),
   //   publicPath: '/dist/',
-  //   filename: 'lixi-ui.common.js',
+  //   filename: 'g-ui.common.js',
   //   chunkFilename: '[id].js',
   //   libraryTarget: 'commonjs2'
   // },
@@ -99,7 +99,8 @@ var config = {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
-          preserveWhitespace: false
+          preserveWhitespace: false,
+          prettify: false
         }
       },
       {
@@ -109,7 +110,8 @@ var config = {
             loader: 'vue-loader',
             options: {
               compilerOptions: {
-                preserveWhitespace: false
+                preserveWhitespace: false,
+                prettify: false
               }
             }
           },
@@ -141,7 +143,7 @@ var config = {
     new HtmlWebpackPlugin({
       template: './examples/index.html',
       filename: './index.html',
-      favicon: './examples/assets/images/lixi-logo.png'
+      favicon: './examples/assets/images/g-logo.png'
     }),
     new VueLoaderPlugins()
   ]

@@ -3,7 +3,7 @@
     <div class="top">
       <div class="inner">
         <div class="left">
-          <img src="../../assets/images/lixi-logo.png">
+          <img src="../../assets/images/g-logo.png">
         </div>
         <div class="right">
           <h1>

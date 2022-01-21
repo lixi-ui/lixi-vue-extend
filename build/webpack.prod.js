@@ -11,7 +11,7 @@ var config = {
     docs: path.resolve(process.cwd(), "./examples/main.js") 
   },
   output: {
-    path: path.resolve(process.cwd(), './examples/lixi-ui/'),
+    path: path.resolve(process.cwd(), './examples/g-ui/'),
     publicPath: '',
     filename: '[name].js',
     chunkFilename: '[name].js'
@@ -106,7 +106,7 @@ var config = {
     new HtmlWebpackPlugin({
       template: './examples/index.html',
       filename: './index.html',
-      favicon: './examples/assets/images/lixi-logo.png'
+      favicon: './examples/assets/images/g-logo.png'
     }),
     new VueLoaderPlugins(),
     new MiniCssExtractPlugin({

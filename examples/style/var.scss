@@ -1,6 +1,7 @@
 @use "sass:math";
+@import "g-ui/src/style/src/base1.scss";
 
-$--color-primary: #fb6638;
+$--color-primary: #FF5224;
 $--color-white: #fff;
 
 $--color-primary-light-5: mix($--color-white, $--color-primary, 50%) !default; /* a0cfff */
@@ -27,4 +28,46 @@ $--text-color-5: mix($--color-white, $--color-primary, 50%) !default;
   --primary-color-5: #{$--color-primary-light-5};
   --primary-color-8: #{$--color-primary-light-8};
   --primary-color-9: #{$--color-primary-light-9};
+
+  --secondary-color: #FA8C16;
+  --secondary-color-blue: #4A90E2;
+  --secondary-color-warning: #D40000;
+
+  --primary-linear-gradient: linear-gradient(to bottom, #FF5224, #FF8A4A);
+  --secondary-linear-gradient: linear-gradient(to bottom, #FF5050, #FF1269);
+
+  --secondary-base: #F5F5F5;
+  --cut-off-line: #EAEAEA;
+
+  --font-color: rgba(0,0,0,0.85);
+  --font-color-primary: rgba(0,0,0,0.65);
+  --font-color-secondary: rgba(0,0,0,0.45);
+  --font-color-tip: #ccc;
+
+  --shadow-1: 0px 0px 8px 0 rgba(0,0,0,0.1);
+  --shadow-2: 0px 0px 8px 0 rgba(0,0,0,0.06);
+
+  // 中文简体
+  --font-family-cn: -apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue","Noto Sans SC",Microsoft YaHei,Helvetica,sans-serif;
+  --font-family-hk: -apple-system,BlinkMacSystemFont，"Noto Sans HK","Open sans",sans-serif;
+}
+
+@media only screen and (max-width: 1023px) {
+  :root{
+    --font-size-24: r(24);
+    --font-size-20: r(20);
+    --font-size-16: r(16);
+    --font-size-14: r(14);
+    --font-size-12: r(12);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  :root{
+    --font-size-24: 24px;
+    --font-size-20: 20px;
+    --font-size-16: 16px;
+    --font-size-14: 14px;
+    --font-size-12: 12px;
+  }
 }

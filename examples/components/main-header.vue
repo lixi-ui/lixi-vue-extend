@@ -1,7 +1,7 @@
 <template>
   <div class='main-header'>
     <div class="main-nav-left">
-      <img src="./lixi-logo.png" />
+      <img src="./g-logo.png" />
     </div>
     <div class="main-nav-right">
       <div class="nav-right">

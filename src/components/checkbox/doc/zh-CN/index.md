@@ -1,5 +1,24 @@
-### 加载
+## 复选框
 
+### 示例
+:::demo
+```html
+<div>
+  <g-checkbox :checked="check"/>
+</div>
+<script>
+  export default{
+    data(){
+      return {
+        check: true
+      }
+    }
+  }
+</script>
+
+```
+:::
+### 不可点击
 :::demo
 ```html
 <div>
