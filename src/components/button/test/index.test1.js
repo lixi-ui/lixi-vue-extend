@@ -2,11 +2,11 @@
 import {jest} from '@jest/globals'
 jest.useFakeTimers();
 import { mount } from '@vue/test-utils';
-import Component from '../package/index.js';
+import Component from '../package/index.ts';
 
 describe('Component', () => {
   test('is a Vue instance', () => {
-    // const wrapper = mount(Component);
+    const wrapper = mount(Component);
     // console.log('wrapper', wrapper);
     expect(7).toBe(7);
   })

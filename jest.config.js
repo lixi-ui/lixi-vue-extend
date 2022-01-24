@@ -33,6 +33,7 @@ module.exports = {
             },
           ],
           '@babel/preset-typescript',
+          "@vue/cli-plugin-babel/preset"
         ],
         "plugins": ["@vue/babel-plugin-jsx", "@babel/plugin-transform-runtime"]
       }

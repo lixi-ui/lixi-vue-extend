@@ -1,8 +1,7 @@
 {
   "presets": [
     ["@babel/preset-env", { "modules": false, "targets": { "node": "current" } }],
-    "@vue/babel-preset-jsx",
-    "@vue/cli-plugin-babel/preset"
+    "@vue/babel-preset-jsx"
   ],
   "plugins": ["@vue/babel-plugin-jsx", "@babel/plugin-transform-runtime"],
   "env": {
