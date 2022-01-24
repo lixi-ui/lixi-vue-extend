@@ -1,6 +1,7 @@
 var path = require("path");
 var webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const copy = require('./copy');
 
 var config = {
   mode:"production",
@@ -50,6 +51,8 @@ webpack(config, function (err) {
   if(err){
     console.log(err)
   } else {
-    console.log("build ok")
+    console.log("input", path.resolve(process.cwd() , './src/asset'));
+    console.log("output", path.resolve(process.cwd(), './lib/style/src/asset'));
+    copy(path.resolve(process.cwd() , './src/asset'), path.resolve(process.cwd(), './lib/style/src/'))
   }
 })

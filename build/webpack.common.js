@@ -95,14 +95,6 @@ var config = {
         ]
       },
       {
-        test: /\.(scss|css)$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader'
-        ]
-      },
-      {
         test: /\.(png|jpe?g|gif|svg|ttf|woff|woff2)(\?.*)?$/,
         loader: 'url-loader',
         options: {
