@@ -3,6 +3,7 @@
 import Button from './components/button/package/index.ts';
 import Loading from './components/Loading/src/index.ts';
 import checkbox from './components/checkbox//src/index.ts';
+import checkbox1 from './components/checkbox-1//src/index.ts';
 import europeWarranty from './components/europe-warranty/src/index.ts';
 import FloatContactShopper from './components/float-contact-shopper/src/index.ts';
 import Image from './components/image/src/index.ts';
@@ -24,6 +25,7 @@ const components = [
   Button,
   Loading,
   checkbox,
+  checkbox1,
   europeWarranty,
   FloatContactShopper,
   Image,

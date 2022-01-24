@@ -4,6 +4,7 @@ import Design from './design/doc/index';
 import Plan from './plan/index';
 import Loading from 'g-ui/src/components/loading/doc/index.vue';
 import Checkbox from 'g-ui/src/components/checkbox/doc/index.vue';
+import Checkbox1 from 'g-ui/src/components/checkbox-1/doc/index.vue';
 import EuropeWarranty from 'g-ui/src/components/europe-warranty/doc/index.vue';
 import FloatContactShopper from 'g-ui/src/components/float-contact-shopper/doc/index.vue';
 import Image from 'g-ui/src/components/image/doc/index.vue';
@@ -59,6 +60,13 @@ const router = [
     urlPath: '/docs/checkbox',
     title: '复选框',
     component: Checkbox
+  },
+  {
+    path: '/docs/checkbox1',
+    name: 'checkbox1',
+    urlPath: '/docs/checkbox1',
+    title: '复选框1',
+    component: Checkbox1
   },
   {
     path: '/docs/europe-warranty',
