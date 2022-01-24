@@ -24,8 +24,7 @@
     <span v-if="$slots.default"><slot></slot></span>
   </button>
 </template>
-<script lang="ts">
-  let num: number = 1
+<script>
   export default {
     name: 'lxve-button',
 
