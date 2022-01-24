@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const VueLoaderPlugins = require('vue-loader/lib/plugin');
 
 var config = {
-  mode: "development",
+  mode: "production",
   entry: {
     app: ['./src/index.js']
   },
@@ -23,6 +23,9 @@ var config = {
       commonjs2: 'vue',
       amd: 'vue'
     }
+  },
+  optimization: {
+    minimize: false
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
