@@ -10,6 +10,19 @@
 @import "../../components/dropdown/style/index.scss";
 @import "./popper";
 
-.el-button{
-  color: blue;
-}
+
+@import "src/components/checkbox/style/index.scss";
+@import "src/components/europe-warranty/style/index.scss";
+@import "src/components/float-contact-shopper/style/index.scss";
+@import "src/components/g-button/style/index.scss";
+@import "src/components/gp-pagination/style/index.scss";
+@import "src/components/hot-search/style/index.scss";
+@import "src/components/image/style/index.scss";
+@import "src/components/input/style/index.scss";
+@import "src/components/loading/style/index.scss";
+@import "src/components/popover/style/index.scss";
+@import "src/components/preview-images/style/index.scss";
+@import "src/components/search/style/index.scss";
+@import "src/components/step/style/index.scss";
+@import "src/components/wechat-qrcode/style/index.scss";
+@import "src/components/zoom-image/style/index.scss";

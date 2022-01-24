@@ -15,7 +15,7 @@
     "dist": "node ./build/webpack.conf.js",
     "analyzer": "node ./build/webpack.prod.js",
     "common": "node ./build/webpack.common.js",
-    "build:style": "gulp build --gulpfile ./src/style/gulpfile.js"
+    "build:style": "node ./build/webpack.style.js"
   },
   "author": "lingniker",
   "keywords": [

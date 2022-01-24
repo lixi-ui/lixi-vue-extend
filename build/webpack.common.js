@@ -120,6 +120,10 @@ var config = {
 
 
 webpack(config,function(err,res){
-  console.log("lib seccess");
+  if (err) {
+    console.log('err', err)
+  } else {
+    console.log("lib seccess");
+  }
   // console.log("res", res);
 });
