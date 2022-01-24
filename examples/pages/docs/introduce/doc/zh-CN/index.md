@@ -40,30 +40,3 @@
 2. 并不属于组件的二次封装  
 
 #### 响应式框架
-
-#### 特别提示
-```js
-  // 如果使用的是 node 8 版本 可能会出现错误
-
-  // SyntaxError: Invalid regular expression: /[\p{Lu}]/: Invalid escape 正则错误
-
-  // ..\node_modules\camelcase\index.js
-
-  // 修改前
-  const UPPERCASE = /[\p{Lu}]/u;
-  const LOWERCASE = /[\p{Ll}]/u;
-  const LEADING_CAPITAL = /^[\p{Lu}](?![\p{Lu}])/gu;
-  const IDENTIFIER = /([\p{Alpha}\p{N}_]|$)/u;
-  const SEPARATORS = /[_.\- ]+/;
-
-  // 修改后
-  const UPPERCASE = /[\\p{Lu}]/u;
-  const LOWERCASE = /[\\p{Ll}]/u;
-  const LEADING_CAPITAL = /^[\\p{Lu}](?![\\p{Lu}])/gu;
-  const IDENTIFIER = /([\\p{Alpha}\\p{N}_]|$)/u;
-  const SEPARATORS = /[_.\- ]+/;
-
-
-  // 使用 node10 或更高版本的话 无需修改
-
-```
