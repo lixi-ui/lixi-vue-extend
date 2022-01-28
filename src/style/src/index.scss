@@ -1,15 +1,11 @@
-@import "./common/var.scss";
-@import "./mixins/config.scss";
-@import "./mixins/function.scss";
-@import "./mixins/_button.scss";
-@import "./mixins/mixins.scss";
-@import "./mixins/utils.scss";
+@import "function";
+@import "./var.scss";
+@import "./config.scss";
+@import "./mixins.scss";
+@import "./utils.scss";
 @import "./base.scss";
 
 @import "../../components/button/style/index.scss";
-@import "../../components/dropdown/style/index.scss";
-@import "./popper";
-
 
 @import "src/components/checkbox/style/index.scss";
 @import "src/components/checkbox-1/style/index.scss";

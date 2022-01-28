@@ -32,7 +32,7 @@
       webLocale.use()
     },
     mounted(){
-      this.navAll = [{name: 'home', path: '/home'}, { name: 'docs', path: '/docs'}]
+      this.navAll = [{name: 'home', path: '/home'}, { name: 'docs', path: '/docs'}, { name: 'share', path: '/share'}]
     }
   }
 </script>

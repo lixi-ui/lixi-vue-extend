@@ -4,9 +4,9 @@
 :::demo
 ```html
 <div>
-  <g-button type="small">小按钮</g-button>
-  <g-button type="medium">中按钮</g-button>
-  <g-button type="large">大按钮</g-button>
+  <g-button size="small">小按钮</g-button>
+  <g-button size="medium">中按钮</g-button>
+  <g-button size="large">大按钮</g-button>
 </div>
 ```
 :::
@@ -26,5 +26,5 @@
 ### Attributes
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
-| type      | 大小      | string | small/medium/large | small |
+| size      | 大小      | string | small/medium/large | small |
 | theme     | 主题      | string | default/light/plain | default |

@@ -4,9 +4,9 @@
       background
       layout="prev, pager, next"
       :pager-count="5"
-      :current-page="page"
-      :page-size="pageSize"
-      :total="total"
+      :current-page="+page"
+      :page-size="+pageSize"
+      :total="+total"
       @current-change="currentChange">
     </el-pagination>
   </div>
@@ -25,19 +25,19 @@
         default: () => 'prev, pager, next'
       },
       pagerCount: {
-        type: Number,
+        type: Number|String,
         default: () => 5
       },
       page: {
-        type: Number,
+        type: Number|String,
         default: () => 1
       },
       pageSize: {
-        type: Number,
+        type: Number|String,
         default: () => 10
       },
       total: {
-        type: Number,
+        type: Number|String,
         default: () => 0
       },
     },

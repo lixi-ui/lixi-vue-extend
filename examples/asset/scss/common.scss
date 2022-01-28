@@ -1,0 +1,215 @@
+@charset "UTF-8";
+//主题色
+$mainColor: #FF5224;
+$baseWidthRate: 37.5; //如设计稿是750px的话，就是75
+$btnHover: #FF7522;
+$O1: #FF5224;
+$O2: #FF7523;
+$O3: #FA8C16;
+$B1: #4A90E2;
+$R2: #D40000;
+$G1: #FF5224;
+$G2: #FF8A4A;
+$G3: #FF5050;
+$G4: #FF1269;
+$N1: #F5F5F5;
+$N2: #EAEAEA;
+$F1: rgba(0, 0, 0, .85);
+$F2: rgba(0, 0, 0, .65);
+$F3: rgba(0, 0, 0, .45);
+$F4: #ccc;
+$F5: #F5F5F5;
+$F6: #EAEAEA;
+$shadow1: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+$shadow2: 0 2px 8px 0 rgba(0, 0, 0, 0.06);
+// 字号
+$fontLarge: 24px;
+$fontBig: 20px;
+$fontMedium: 16px;
+$fontSmall: 14px;
+$fontMini: 12px;
+
+// 渐变色
+@mixin gradient($color, $type) {
+  @if $color == pink {
+    background-image: linear-gradient(to right,$G3,$G4);
+  } @else {
+    background-image: linear-gradient(to right,$G1,$G2);
+  }
+  @if $type == text {
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
+// px转换为rem
+@function r($num) {
+  @return calc($num / $baseWidthRate) + rem;
+}
+//背景图片
+@mixin bg-image($url) {
+  background-image: url('~asset/images/wap/' +$url + "@2x.png");
+  @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+    background-image: url('~asset/images/wap/' +$url + "@3x.png");
+  }
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+@mixin bg-image-pc($url) {
+  background-image: url('~asset/images/' +$url + ".png");
+  @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+    background-image: url('~asset/images/' +$url + "@2x.png");
+  }
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+// 某行溢出省略号
+@mixin multipleEllipsis($num) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $num;
+  -webkit-box-orient: vertical;
+}
+// 图片盒子模型
+@mixin imgBox($width, $height) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $width;
+  height: $height;
+  img{
+    max-width: $width;
+    max-height: $height;
+  }
+}
+@mixin scrollBar {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #F5F5F5;
+    border-radius: 3px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+  }
+  &::-webkit-scrollbar-corner {
+    background: #F5F5F5;
+  }
+}
+@mixin btn-gradient() {
+  color: #ffffff;
+  background-color: $mainColor;
+  border: 0 none;
+  transition: all .2s;
+  transform-origin: center;
+  user-select: none;
+  border-radius: 4px;
+  &:hover {
+    background-image: none;
+    background-color: $btnHover;
+  }
+  &::before {
+    display: none !important;
+  }
+}
+@mixin btnLight {
+  color: #fff;
+  border: 1px solid $mainColor;
+  background-color: $mainColor;
+  &:hover, &:active {
+    opacity: 0.8;
+  }
+}
+@mixin btnDefault {
+  color: $mainColor;
+  border: 1px solid $mainColor;
+  background-color: #fff;
+  &:hover, &:active {
+    background-color: $mainColor;
+    color: #fff;
+  }
+}
+@mixin btnPlain {
+  color: rgba(0, 0, 0, 0.85);
+  border: 1px solid #ccc;
+  background-color: #fff;
+  &:hover, &:active {
+    border-color: $mainColor;
+    background-color: #fff;
+    color: $mainColor;
+  }
+}
+@mixin order-spirit($key, $height) {
+  background-image: url('~asset/images/wap/icon-spirit-order.png');
+  background-repeat: no-repeat;
+  background-size: auto $height;
+  @if $key == 'invoice' {
+    background-position-x: 0;
+  } @else if $key == 'invoice-hover' {
+    background-position-x: -1 * $height;
+  } @else if $key == 'contact' {
+    background-position-x: -2 * $height;
+  } @else if $key == 'contact-hover' {
+    background-position-x: -3 * $height;
+  }
+}
+@mixin feedback-spirit($key, $height) {
+  background-image: url('~asset/images/wap/icon-spirit-good-bad.png');
+  background-repeat: no-repeat;
+  background-size: auto $height;
+  @if $key == 'good-gray' {
+    background-position-x: 0;
+  } @else if $key == 'bad-gray' {
+    background-position-x: -1 * $height;
+  } @else if $key == 'good-white' {
+    background-position-x: -2 * $height;
+  } @else if $key == 'bad-white' {
+    background-position-x: -3 * $height;
+  } @else if $key == 'good-light' {
+    background-position-x: -4 * $height;
+  } @else if $key == 'bad-light' {
+    background-position-x: -5 * $height;
+  }
+}
+@mixin contact-spirit($key, $width, $height) {
+  background-image: url('~asset/images/spirit/icon-spirit-contact.png');
+  background-repeat: no-repeat;
+  background-size: auto $height;
+  @if $key == 'order' {
+    background-position-x: 0;
+  } @else if $key == 'product' {
+    background-position-x: -1 * $width;
+  } @else if $key == 'logistics' {
+    background-position-x: -2 * $width;
+  } @else if $key == 'payment' {
+    background-position-x: -3 * $width;
+  } @else if $key == 'partner' {
+    background-position-x: -4 * $width;
+  } @else {
+    @if $key == 'partner-1' {
+      background-position-y: -26px;
+    } @else if $key == 'location' {
+      background-position-x: -1 * $width;
+      background-position-y: -26px;
+    } @else if $key == 'infomation' {
+      background-position-x: -2 * $width;
+      background-position-y: -26px;
+    } @else if $key == 'partner-2' {
+      background-position-x: -3 * $width;
+      background-position-y: -26px;
+    } @else if $key == 'email' {
+      background-position-x: -4 * $width;
+      background-position-y: -26px;
+    }
+    @media only screen and (max-width: 1023px) {
+      background-position-y: -0.693333rem;
+    }
+  }
+}

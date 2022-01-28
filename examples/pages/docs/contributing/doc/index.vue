@@ -6,10 +6,9 @@
 <script>
 import zhCN from './zh-CN/index.md'
 import es from './es/index.md'
-import "./index.scss"
 
 export default {
-  name: 'g-docs-checkbox',
+  name: 'g-docs-contributing',
   components: {
     zhCN,
     es

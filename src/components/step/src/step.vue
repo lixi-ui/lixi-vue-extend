@@ -31,7 +31,6 @@ export default {
   },
   data(){
     return {
-      step: '步骤',
       addToCart: '添加卡片',
       checkOut: '选择',
       palceOrder: '订单'

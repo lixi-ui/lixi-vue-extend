@@ -46,25 +46,25 @@
   </template>
   <style>
     .font-size-24{
-      font-size: var(--font-size-24);
+      font-size: var(--g-font-size-24);
     }
     .font-size-20{
-      font-size: var(--font-size-20);
+      font-size: var(--g-font-size-20);
     }
     .font-size-16{
-      font-size: var(--font-size-16);
+      font-size: var(--g-font-size-16);
     }
     .font-size-14{
-      font-size: var(--font-size-14);
+      font-size: var(--g-font-size-14);
     }
     .font-size-12{
-      font-size: var(--font-size-12);
+      font-size: var(--g-font-size-12);
     }
     .font-family-cn{
-      font-family: var(--font-family-cn)
+      font-family: var(--g-font-family-cn)
     }
     .font-family-hk{
-      font-family: var(--font-family-hk)
+      font-family: var(--g-font-family-hk)
     }
   </style>
 ```

@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+$btnHover: #FF7522;
+$errColor: #D0021B;
+$correctColor: #7ED321;
+$logoBgColor: #FEC225;
+
+// 主题色
+$--color-primary: #FF5224;
+// 辅助色
+$--secondary-color: #FA8C16;
+// 辅助色蓝
+$--secondary-color-blue: #4A90E2;
+// 告警色
+$--secondary-color-warning: #D40000;
+// 背景色
+$--background-color: #F9F9FA;
+$--color-white: #fff;
+// 字体色
+$--text-color: #1f2f3d;
+$--text-color-5: mix($--color-white, $--color-primary, 50%) !default;
+
+$--primary-linear-gradient: linear-gradient(to bottom, #FF5224, #FF8A4A);
+$--secondary-linear-gradient: linear-gradient(to bottom, #FF5050, #FF1269);
+
+$--secondary-base: #F5F5F5;
+$--cut-off-line: #EAEAEA;
+
+$--font-color: rgba(0,0,0,0.85);
+$--font-color-primary: rgba(0,0,0,0.65);
+$--font-color-secondary: rgba(0,0,0,0.45);
+$--font-color-tip: #ccc;
+
+$--shadow-1: 0px 0px 8px 0 rgba(0,0,0,0.1);
+$--shadow-2: 0px 0px 8px 0 rgba(0,0,0,0.06);
+
+// 字体大小
+$--font-size:  16px;
+$--font-size-h1:  32px;
+$--font-size-h2:  28px;
+$--font-size-h3:  24px;
+$--font-size-h4:  20px;
+
+
+
+:root {
+  --g-font-sans: "Calibre";
+  --g-font-mono: "Jetbrains Mono",monospace;
+  --g-font-helvetica: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',SimSun,sans-serif;
+  --g-background-color: #F9F9FA;
+  --g-text-color: #{$--text-color};
+  --g-text-color-5: #{$--text-color-5};
+  --g-font-size:  16px;
+  --g-font-size-h1:  32px;
+  --g-font-size-h2:  28px;
+  --g-font-size-h3:  24px;
+  --g-font-size-h4:  20px;
+  --g-primary-color: #{$--color-primary};
+  // --primary-color-5: #{$--color-primary-light-5};
+  // --primary-color-8: #{$--color-primary-light-8};
+  // --primary-color-9: #{$--color-primary-light-9};
+
+  --g-secondary-color: #FA8C16;
+  --g-secondary-color-blue: #4A90E2;
+  --g-secondary-color-warning: #D40000;
+
+  --g-primary-linear-gradient: linear-gradient(to bottom, #FF5224, #FF8A4A);
+  --g-secondary-linear-gradient: linear-gradient(to bottom, #FF5050, #FF1269);
+
+  --g-secondary-base: #F5F5F5;
+  --g-cut-off-line: #EAEAEA;
+
+  --g-font-color: rgba(0,0,0,0.85);
+  --g-font-color-primary: rgba(0,0,0,0.65);
+  --g-font-color-secondary: rgba(0,0,0,0.45);
+  --g-font-color-tip: #ccc;
+
+  --g-shadow-1: 0px 0px 8px 0 rgba(0,0,0,0.1);
+  --g-shadow-2: 0px 0px 8px 0 rgba(0,0,0,0.06);
+
+  // 中文简体
+  --g-font-family-cn: -apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue","Noto Sans SC",Microsoft YaHei,Helvetica,sans-serif;
+  --g-font-family-hk: -apple-system,BlinkMacSystemFont，"Noto Sans HK","Open sans",sans-serif;
+}
+
+
+@media only screen and (max-width: 1023px) {
+  :root{
+    --g-font-size-24: #{r(24)};
+    --g-font-size-20: #{r(20)};
+    --g-font-size-16: #{r(16)};
+    --g-font-size-14: #{r(14)};
+    --g-font-size-12: #{r(12)};
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  :root{
+    --g-font-size-24: #{p(24)};
+    --g-font-size-20: #{p(20)};
+    --g-font-size-16: #{p(16)};
+    --g-font-size-14: #{p(14)};
+    --g-font-size-12: #{p(12)};
+  }
+}

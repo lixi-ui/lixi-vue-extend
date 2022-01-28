@@ -1,0 +1,11 @@
+$baseWidthRate: 37.5; //如设计稿是750px的话，就是75
+
+// px转换为rem
+@function r($num) {
+  @return calc($num / $baseWidthRate) + rem;
+}
+
+// 以 px 作单位
+@function p($num) {
+  @return $num + px;
+}

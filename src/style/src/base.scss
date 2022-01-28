@@ -1,0 +1,157 @@
+@charset "UTF-8";
+
+$mainColor: #FF5224;
+$baseWidthRate: 37.5; //如设计稿是750px的话，就是75
+$btnHover: #FF7522;
+$O1: #FF5224;
+$O2: #FF7523;
+$O3: #FA8C16;
+$B1: #4A90E2;
+$R2: #D40000;
+$G1: #FF5224;
+$G2: #FF8A4A;
+$G3: #FF5050;
+$G4: #FF1269;
+$N1: #F5F5F5;
+$N2: #EAEAEA;
+$F1: rgba(0, 0, 0, .85);
+$F2: rgba(0, 0, 0, .65);
+$F3: rgba(0, 0, 0, .45);
+$F4: #ccc;
+$F5: #F5F5F5;
+$F6: #EAEAEA;
+$shadow1: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+$shadow2: 0 2px 8px 0 rgba(0, 0, 0, 0.06);
+// 字号
+$fontLarge: 24px;
+$fontBig: 20px;
+$fontMedium: 16px;
+$fontSmall: 14px;
+$fontMini: 12px;
+
+//主题色
+$mainColor: #FF5224;
+$btnHover: #FF7522;
+$errColor: #D0021B;
+$correctColor: #7ED321;
+$logoBgColor: #FEC225;
+//字体
+$robReg: "Roboto Regular","Helvetica",Arial,"PingFang SC","Hiragino Sans GB","Heiti SC","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+$robMed: "Roboto Medium","Helvetica",Arial,"PingFang SC","Hiragino Sans GB","Heiti SC","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+$robBold: "Roboto","Helvetica",Arial,"PingFang SC","Hiragino Sans GB","Heiti SC","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+$commonFont: "Helvetica",Arial,"PingFang SC","Hiragino Sans GB","Heiti SC","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+$globalFontBak: "Roboto Regular","PingFang SC","Helvetica",Arial,"Hiragino Sans GB","Heiti SC","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+$globalFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Noto CJK", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
+
+.cn-font{
+  font-family: -apple-system,BlinkMacSystemFont,"PingFang SC",Helvetica Neue,"Hiragino Sans GB",Microsoft YaHei,Helvetica,sans-serif;
+}
+.kr-font{
+  font-family: NanumGothic,맑은고딕,"Noto Sans KR",sans-serif;
+}
+.jp-font{
+  font-family: -apple-system,BlinkMacSystemFont, メイリオ , Meiryo, ヒラギノ角ゴ Pro W3, "Hiragino Kaku Gothic Pro", Verdana, ＭＳ Ｐゴシック, sans-serif;
+}
+.other-font{
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Droid Sans","Helvetica Neue",Arial,sans-serif;
+}
+.lock-scroll {
+  height: 100vh !important;
+  overflow: hidden;
+  position: fixed;
+}
+a {
+  text-decoration: none;
+}
+input{
+  -webkit-appearance: none;
+}
+
+img {
+  opacity: 0;
+  animation-name: fadein;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+  animation-timing-function: ease-out;
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+img [lazy='loaded'] {
+  opacity: 0;
+  animation-name: fadein;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+  animation-timing-function: ease-out;
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+.clearfix {
+  &:before, &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-col{
+  flex-direction: column;
+}
+.flex.h-center{
+  align-items: center;
+}
+.flex.center{
+  justify-content: center;
+}
+.flex.around{
+  justify-content: space-around;
+}
+.flex.between{
+  justify-content: space-between;
+}
+.flex-1{
+  flex: 1
+}
+.text-left{
+  text-align: left;
+}
+.text-center{
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+}
+
+//主题色
+$mainFont: Roboto, Lato, sans-serifRoboto, Lato, sans-serif;
+$BoldFont: "SFProText-Bold", "Helvetica", Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+$RegFont: "SFProText-Regular", "Helvetica", Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+$medFont: "SFProText-Medium", "Helvetica", Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+
+.clearfix {
+  &::before, &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}

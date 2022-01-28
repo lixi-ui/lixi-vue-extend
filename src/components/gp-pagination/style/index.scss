@@ -1,10 +1,10 @@
-@import 'src/asset/scss/common.scss';
+@import 'src/style/src/mixins';
 @media only screen and (max-width: 1023px) {
-.gp-pagination{
+  .gp-pagination{
     text-align: right;
-    ::v-deep .el-pagination{
-    padding: 0;
-    .btn-prev, .btn-next, .el-pager li{
+    .el-pagination{
+      padding: 0;
+      .btn-prev, .btn-next, .el-pager li{
         font-size: r(13);
         font-weight: 400;
         width: r(32);
@@ -15,21 +15,21 @@
         background-color: #fff;
         border: r(1) solid #CCCCCC;
         .el-icon{
-        font-size: r(18);
+         font-size: r(18);
         }
         &.active{
-        border-color: $mainColor;
+         border-color: $mainColor; 
         }
+      }
     }
-    }
-}
+  }
 }
 @media only screen and (min-width: 1024px) {
-.gp-pagination {
+  .gp-pagination {
     text-align: right;
-    ::v-deep .el-pagination{
-    padding: 0;
-    .btn-prev, .btn-next, .el-pager li{
+    .el-pagination{
+      padding: 0;
+      .btn-prev, .btn-next, .el-pager li{
         font-size: 13px;
         font-weight: 400;
         width: 36px;
@@ -39,12 +39,12 @@
         border: 1px solid #CCCCCC;
         background-color: #fff;
         &.active{
-        border-color: $mainColor;
+          border-color: $mainColor;
         }
         .el-icon{
-        font-size: 18px;
+          font-size: 18px;
         }
+      }
     }
-    }
-}
+  }
 }

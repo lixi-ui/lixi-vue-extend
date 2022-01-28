@@ -1,176 +1,4 @@
-@charset "UTF-8";
-//主题色
-$mainColor: #FF5224;
-$btnHover: #FF7522;
-$errColor: #D0021B;
-$correctColor: #7ED321;
-$logoBgColor: #FEC225;
-//字体
-$robReg: "Roboto Regular",
-"Helvetica",
-Arial,
-"PingFang SC",
-"Hiragino Sans GB",
-"Heiti SC",
-"Microsoft YaHei",
-"WenQuanYi Micro Hei",
-sans-serif;
-$robMed: "Roboto Medium",
-"Helvetica",
-Arial,
-"PingFang SC",
-"Hiragino Sans GB",
-"Heiti SC",
-"Microsoft YaHei",
-"WenQuanYi Micro Hei",
-sans-serif;
-$robBold: "Roboto",
-"Helvetica",
-Arial,
-"PingFang SC",
-"Hiragino Sans GB",
-"Heiti SC",
-"Microsoft YaHei",
-"WenQuanYi Micro Hei",
-sans-serif;
-$commonFont: "Helvetica",
-Arial,
-"PingFang SC",
-"Hiragino Sans GB",
-"Heiti SC",
-"Microsoft YaHei",
-"WenQuanYi Micro Hei",
-sans-serif;
-$globalFontBak: "Roboto Regular",
-"PingFang SC",
-"Helvetica",
-Arial,
-"Hiragino Sans GB",
-"Heiti SC",
-"Microsoft YaHei",
-"WenQuanYi Micro Hei",
-sans-serif;
-$globalFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Noto CJK", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
-html, body {
-  // font-family: $globalFont !important;
-}
-// @font-face {
-//   font-family: OpenSans;
-// //   src: url("~asset/font/Open_Sans.woff2");
-// }
-// @font-face {
-//   font-family: NanumGothic;
-// //   src: url("~asset/font/NanumGothic.woff2");
-// }
-// @font-face {
-//   font-family: IntegralNum;
-//   src:url("~asset/font/D-DIN.woff2")
-// }
-.cn-font{
-  font-family: -apple-system,BlinkMacSystemFont,"PingFang SC",Helvetica Neue,"Hiragino Sans GB",Microsoft YaHei,Helvetica,sans-serif;
-}
-.kr-font{
-  font-family: NanumGothic,맑은고딕,"Noto Sans KR",sans-serif;
-}
-.jp-font{
-  font-family: -apple-system,BlinkMacSystemFont, メイリオ , Meiryo, ヒラギノ角ゴ Pro W3, "Hiragino Kaku Gothic Pro", Verdana, ＭＳ Ｐゴシック, sans-serif;
-}
-.other-font{
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Droid Sans","Helvetica Neue",Arial,sans-serif;
-}
-.lock-scroll {
-  height: 100vh !important;
-  overflow: hidden;
-  position: fixed;
-}
-a {
-  text-decoration: none;
-}
-input{
-  -webkit-appearance: none;
-}
-
-img {
-  opacity: 0;
-  animation-name: fadein;
-  animation-duration: 0.3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-direction: normal;
-  animation-timing-function: ease-out;
-  @keyframes fadein {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-}
-
-img [lazy='loaded'] {
-  opacity: 0;
-  animation-name: fadein;
-  animation-duration: 0.3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-direction: normal;
-  animation-timing-function: ease-out;
-  @keyframes fadein {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-}
-
-.clearfix {
-  &:before, &:after {
-    content: '';
-    display: block;
-    clear: both;
-  }
-}
-.flex{
-  display: flex;
-  flex-wrap: wrap;
-}
-.flex-col{
-  flex-direction: column;
-}
-.flex.h-center{
-  align-items: center;
-}
-.flex.center{
-  justify-content: center;
-}
-.flex.around{
-  justify-content: space-around;
-}
-.flex.between{
-  justify-content: space-between;
-}
-.flex-1{
-  flex: 1
-}
-.text-left{
-  text-align: left;
-}
-.text-center{
-  text-align: center;
-}
-.text-right{
-  text-align: right;
-}
-
-$baseWidthRate: 37.5; //如设计稿是750px的话，就是75
-
-// px转换为rem
-@function r($num) {
-  @return calc($num / $baseWidthRate) + rem;
-}
+@import 'base';
 
 //背景图片
 @mixin bg-image($url) {
@@ -191,19 +19,6 @@ $baseWidthRate: 37.5; //如设计稿是750px的话，就是75
   background-repeat: no-repeat;
 }
 
-//主题色
-$mainFont: Roboto, Lato, sans-serifRoboto, Lato, sans-serif;
-$BoldFont: "SFProText-Bold", "Helvetica", Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-$RegFont: "SFProText-Regular", "Helvetica", Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-$medFont: "SFProText-Medium", "Helvetica", Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-
-.clearfix {
-  &::before, &::after {
-    content: '';
-    display: block;
-    clear: both;
-  }
-}
 // 字体向右渐变色
 @mixin font-gradien($startColor, $endColor) {
   background: linear-gradient(to right, $startColor, $endColor);
@@ -312,6 +127,114 @@ $medFont: "SFProText-Medium", "Helvetica", Arial, "PingFang SC", "Hiragino Sans 
   background-image: linear-gradient(45deg, #4A90E2 0%, #6078EA 100%);
   border-radius: 20px;
 }
+@mixin contact-spirit($key, $width, $height) {
+  background-image: url('~asset/images/spirit/icon-spirit-contact.png');
+  background-repeat: no-repeat;
+  background-size: auto $height;
+  @if $key == 'order' {
+    background-position-x: 0;
+  } @else if $key == 'product' {
+    background-position-x: -1 * $width;
+  } @else if $key == 'logistics' {
+    background-position-x: -2 * $width;
+  } @else if $key == 'payment' {
+    background-position-x: -3 * $width;
+  } @else if $key == 'partner' {
+    background-position-x: -4 * $width;
+  } @else {
+    @if $key == 'partner-1' {
+      background-position-y: -26px;
+    } @else if $key == 'location' {
+      background-position-x: -1 * $width;
+      background-position-y: -26px;
+    } @else if $key == 'infomation' {
+      background-position-x: -2 * $width;
+      background-position-y: -26px;
+    } @else if $key == 'partner-2' {
+      background-position-x: -3 * $width;
+      background-position-y: -26px;
+    } @else if $key == 'email' {
+      background-position-x: -4 * $width;
+      background-position-y: -26px;
+    }
+    @media only screen and (max-width: 1023px) {
+      background-position-y: -0.693333rem;
+    }
+  }
+}
+@mixin feedback-spirit($key, $height) {
+  background-image: url('~asset/images/wap/icon-spirit-good-bad.png');
+  background-repeat: no-repeat;
+  background-size: auto $height;
+  @if $key == 'good-gray' {
+    background-position-x: 0;
+  } @else if $key == 'bad-gray' {
+    background-position-x: -1 * $height;
+  } @else if $key == 'good-white' {
+    background-position-x: -2 * $height;
+  } @else if $key == 'bad-white' {
+    background-position-x: -3 * $height;
+  } @else if $key == 'good-light' {
+    background-position-x: -4 * $height;
+  } @else if $key == 'bad-light' {
+    background-position-x: -5 * $height;
+  }
+}
+@mixin order-spirit($key, $height) {
+  background-image: url('~asset/images/wap/icon-spirit-order.png');
+  background-repeat: no-repeat;
+  background-size: auto $height;
+  @if $key == 'invoice' {
+    background-position-x: 0;
+  } @else if $key == 'invoice-hover' {
+    background-position-x: -1 * $height;
+  } @else if $key == 'contact' {
+    background-position-x: -2 * $height;
+  } @else if $key == 'contact-hover' {
+    background-position-x: -3 * $height;
+  }
+}
+@mixin btnPlain {
+  color: rgba(0, 0, 0, 0.85);
+  border: 1px solid #ccc;
+  background-color: #fff;
+  &:hover, &:active {
+    border-color: $mainColor;
+    background-color: #fff;
+    color: $mainColor;
+  }
+}
+@mixin btnDefault {
+  color: $mainColor;
+  border: 1px solid $mainColor;
+  background-color: #fff;
+  &:hover, &:active {
+    background-color: $mainColor;
+    color: #fff;
+  }
+}
+@mixin btnLight {
+  color: #fff;
+  border: 1px solid $mainColor;
+  background-color: $mainColor;
+  &:hover, &:active {
+    opacity: 0.8;
+  }
+}
+// 渐变色
+@mixin gradient($color, $type) {
+  @if $color == pink {
+    background-image: linear-gradient(to right,$G3,$G4);
+  } @else {
+    background-image: linear-gradient(to right,$G1,$G2);
+  }
+  @if $type == text {
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
+
+
 
 .van-dialog {
   .van-dialog__content {
@@ -328,6 +251,7 @@ $medFont: "SFProText-Medium", "Helvetica", Arial, "PingFang SC", "Hiragino Sans 
       opacity: 1 !important;
   }
 }
+
 @media screen and (min-width: 1024px) {
   .van-dialog {
     .van-dialog__footer {
@@ -351,10 +275,6 @@ $medFont: "SFProText-Medium", "Helvetica", Arial, "PingFang SC", "Hiragino Sans 
     }
   }
 }
-
-// @import "./vant";
-
-
 @media only screen and (min-width: 1024px) {
   #app {
     .totalWarp-content {

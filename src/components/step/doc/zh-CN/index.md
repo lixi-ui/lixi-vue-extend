@@ -1,10 +1,12 @@
-### 加载
+## 步骤
 
 :::demo
 ```html
 <div>
   <g-step :step="step"/>
-  <g-button @click="click">下一步</g-button>
+  <div class="btn-wrap">
+    <g-button @click="click">下一步</g-button>
+  </div>
 </div>
 <script>
   export default{
