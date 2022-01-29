@@ -33,7 +33,7 @@
       disabled: Boolean,
     },
     mounted() {
-      console.log(this)
+      // console.log(this)
     },
     methods: {
       handleClick(event) {

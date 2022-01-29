@@ -2,7 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../pages/home';
 import Docs from '../pages/docs';
+import Share from '../pages/share';
 import docsRouter from 'examples/pages/docs/docs-router.js';
+import shareRouter from 'examples/pages/share/share-router.js';
 import hljs from 'highlight.js';
 Vue.use(Router)
 
@@ -21,6 +23,14 @@ var routes = [
     redirect: '/docs/introduce',
     component: Docs,
     children: docsRouter
+  },
+  {
+    name: 'share',
+    path: '/share',
+    urlPath: '/share',
+    redirect: '/share/introduce',
+    component: Share,
+    children: shareRouter
   }
 ]
 

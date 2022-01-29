@@ -1,7 +1,6 @@
 import Introduce from './introduce/doc/index';
 import Install from './install/doc/index';
 import Design from './design/doc/index';
-import Contributing from './contributing/doc/index';
 import Plan from './plan/index';
 import Loading from 'g-ui/src/components/loading/doc/index.vue';
 import Checkbox from 'g-ui/src/components/checkbox/doc/index.vue';
@@ -54,13 +53,6 @@ const router = [
     urlPath: '/docs/loading',
     title: '加载',
     component: Loading
-  },
-  {
-    path: '/docs/contributing',
-    name: 'contributing',
-    urlPath: '/docs/contributing',
-    title: '贡献',
-    component: Contributing
   },
   {
     path: '/docs/checkbox',

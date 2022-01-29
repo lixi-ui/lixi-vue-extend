@@ -1,4 +1,4 @@
-### 介绍
+## 介绍
 
 ### jest 单元测试
 
@@ -10,7 +10,7 @@
 
 2. jest 官方文档 https://jestjs.io/
 
-```sh
+```sh 
   # 安装
   npm install vue-jest jest @vue/test-utils babel-jest
 ```

@@ -1,13 +1,14 @@
-import Introduce from './introduce/index.vue'
-import Typescript from './typescript/index.vue'
-import Jest from './jest/index.vue'
-import Sass from './sass/index.vue'
-import Build from './build/index.vue'
-import Deploy from './deploy/index.vue'
-import Publish from './publish/index.vue'
-import Services from './services/index.vue'
-import Nginx from './nginx/index.vue'
-import Loader from './loader/index.vue'
+import Introduce from './introduce/index.vue';
+import Typescript from './typescript/index.vue';
+import Jest from './jest/index.vue';
+import Sass from './sass/index.vue';
+import Build from './build/index.vue';
+import Deploy from './deploy/index.vue';
+import Publish from './publish/index.vue';
+import Services from './services/index.vue';
+import Nginx from './nginx/index.vue';
+import Contributing from './contributing/doc/index';
+import Loader from './loader/index.vue';
 
 var shareRouter = [
   {
@@ -21,6 +22,13 @@ var shareRouter = [
     name: 'ts',
     title: 'typescript 引入',
     component: Typescript
+  },
+  {
+    path: '/docs/contributing',
+    name: 'contributing',
+    urlPath: '/docs/contributing',
+    title: '贡献',
+    component: Contributing
   },
   {
     path: '/share/jest',
