@@ -1,7 +1,7 @@
-import Gcheckbox from './checkbox.vue';
+import Gcheckbox from './g-checkbox.vue';
 
 /* istanbul ignore next */
-Gcheckbox.install = function(Vue) {
+Gcheckbox.install = function(Vue: any) {
   Vue.component(Gcheckbox.name, Gcheckbox);
 };
 

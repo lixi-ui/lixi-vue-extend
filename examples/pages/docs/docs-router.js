@@ -4,7 +4,6 @@ import Design from './design/doc/index';
 import Plan from './plan/index';
 import Loading from 'g-ui/src/components/loading/doc/index.vue';
 import Checkbox from 'g-ui/src/components/checkbox/doc/index.vue';
-import Checkbox1 from 'g-ui/src/components/checkbox-1/doc/index.vue';
 import EuropeWarranty from 'g-ui/src/components/europe-warranty/doc/index.vue';
 import FloatContactShopper from 'g-ui/src/components/float-contact-shopper/doc/index.vue';
 import Image from 'g-ui/src/components/image/doc/index.vue';
@@ -17,6 +16,7 @@ import GSearch from 'g-ui/src/components/search/doc/index.vue';
 import GStep from 'g-ui/src/components/step/doc/index.vue';
 import GWechatQrcode from 'g-ui/src/components/wechat-qrcode/doc/index.vue';
 import GZoomImage from 'g-ui/src/components/zoom-image/doc/index.vue';
+import GSwipe from 'g-ui/src/components/swipe/doc/index.vue';
 
 const router = [
   {
@@ -60,13 +60,6 @@ const router = [
     urlPath: '/docs/checkbox',
     title: '复选框',
     component: Checkbox
-  },
-  {
-    path: '/docs/checkbox1',
-    name: 'checkbox1',
-    urlPath: '/docs/checkbox1',
-    title: '复选框1',
-    component: Checkbox1
   },
   {
     path: '/docs/europe-warranty',
@@ -151,6 +144,13 @@ const router = [
     urlPath: '/docs/zoom-image',
     title: '图片缩放',
     component: GZoomImage
-  }
+  },
+  {
+    path: '/docs/swipe',
+    name: 'swipe',
+    urlPath: '/docs/swipe',
+    title: '轮播图',
+    component: GSwipe
+  },
 ]
 export default router;
