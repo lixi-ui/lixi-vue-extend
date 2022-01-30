@@ -16,9 +16,11 @@
       </div>
     </div>
     <div class="preview-image-mobile">
-      <van-image-preview v-model="visiblePreviewImages"
-          :start-position="index"
-          :images="images">
+      <van-image-preview
+        v-model="visiblePreviewImages"
+        ref="previewImage"
+        :start-position="index"
+        :images="images">
       </van-image-preview>
     </div>
   </div>
