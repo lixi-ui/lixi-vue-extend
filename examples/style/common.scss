@@ -169,9 +169,12 @@ code.hljs{
     color: #89DDFF;
   }
   .hljs-keyword{
-    color: var(--primary-color);
+    color: #d73a49;
   }
   .hljs-regexp{
+    color: #89DDFF;
+  }
+  .hljs-subst{
     color: #89DDFF;
   }
 }

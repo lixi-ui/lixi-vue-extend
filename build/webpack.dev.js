@@ -145,6 +145,9 @@ var config = {
       filename: './index.html',
       favicon: './examples/assets/images/g-logo.png'
     }),
+    new webpack.DefinePlugin({
+      EASY_ENV_IS_BROWSER:"'true'"
+    }),
     new VueLoaderPlugins()
   ]
 }

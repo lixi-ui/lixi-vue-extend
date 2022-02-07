@@ -1,4 +1,4 @@
-var EASY_ENV_IS_BROWSER = true
+// var EASY_ENV_IS_BROWSER = true
 var bindEvent = (function() {
   if(EASY_ENV_IS_BROWSER){
     if(document.addEventListener) {
