@@ -28,11 +28,13 @@
 
 <script>
   import { ImagePreview } from 'vant';
+  import Vue from 'vue';
+  Vue.use(ImagePreview);
   export default {
     name: 'g-preview-images',
-    components: {
-      VanImagePreview: ImagePreview
-    },
+    // components: {
+    //   VanImagePreview: ImagePreview
+    // },
     props: {
       images: {
         type: Array,
