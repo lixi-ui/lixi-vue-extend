@@ -1,10 +1,18 @@
 ## 介绍
+### 为什么要使用sass?
 
-### css 加载说明
+1. 更好编写和管理样式表, 页面的风格一致
+
+2. 共用的东西，规划成一个可重用块，只需要定义一次,然后引用到需要的地方即可
+
 ### 需要安装的npm包 sass,sass-loader,style-loader,css-loader
 
 ```sh
   # 安装
+  # 目前使用的是 sass 并没有使用 node-sass(已经不能下载了)
+  # sass-loader 解析 sass 的 模块。
+  # css-loader 解析 css 里面的一些语法
+  # style-lader 将 css 转为 style 加载的模式
   npm install sass sass-loader style-loader css-loader --save-dev
 ```
 
@@ -21,7 +29,7 @@
           use: [
             "style-loader",
             {
-              loader: "css-loader",
+              loader: "css-loader", // 处理 css 
               options: {
                 url: false
               }
@@ -34,9 +42,7 @@
   }
 ```
 
-### 为什么要使用sass?
-
-1. 更好编写和管理样式表, 页面的风格一致
+### 定义全局样式，风格一致
 
 ```scss
   @use "sass:map";
@@ -80,7 +86,7 @@
 
 ```
 
-2. 共用的东西，规划成一个可重用块，只需要定义一次,然后引用到需要的地方即可
+### 函数模块化，可重复使用
 
 ```scss
   @mixin default-type { // 定义一个可重用块样式
