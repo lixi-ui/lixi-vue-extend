@@ -1,68 +1,120 @@
 const path = require('path');
-const ProgressBarPlugin = require('progress-bar-webpack-plugin');
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const webpack = require('webpack');
+const VueLoaderPlugins = require('vue-loader/lib/plugin');
 
 const Components = require('../components.json');
-const config = require('./config');
 
-const webpackConfig = {
-  mode: 'production',
+
+var config = {
+  mode: "production",
   entry: Components,
   output: {
-    path: path.resolve(process.cwd(), './lib'),
+    path: path.resolve(process.cwd(), './lib/components/'),
     publicPath: '/dist/',
     filename: '[name].js',
     chunkFilename: '[id].js',
-    libraryTarget: 'commonjs2'
+    libraryTarget: 'umd'
   },
-  resolve: {
-    extensions: ['.js', '.vue', '.json'],
-    alias: config.alias,
-    modules: ['node_modules']
+  externals: {
+    vue: {
+      root: 'Vue',
+      commonjs: 'vue',
+      commonjs2: 'vue',
+      amd: 'vue'
+    }
   },
-  externals: config.externals,
-  performance: {
-    hints: false
-  },
-  stats: 'none',
   optimization: {
     minimize: false
   },
+  resolve: {
+    extensions: ['.js', '.vue', '.json'],
+    modules: ['node_modules'],
+    alias: {
+      'src': path.join(__dirname,'../src'),
+      'lixiv-ui':  path.join(__dirname, '../'),
+      'g-ui':  path.join(__dirname, '../'),
+      "examples": path.join(__dirname, '../examples')
+    }
+  },
   module: {
-    rules: [
+    rules:[
       {
         test: /\.(jsx?|babel|es6)$/,
         include: process.cwd(),
-        exclude: config.jsexclude,
-        loader: 'babel-loader'
+        exclude: /popper\.js/,
+        loader: 'babel-loader',
+        options: {
+          presets:[
+            ["@babel/preset-env", { "modules": false }],
+            [
+              '@vue/babel-preset-jsx',
+              {
+                functional: false,
+              },
+            ],
+          ]
+        }
+      },
+      {
+        test: /\.(tsx?)$/,
+        include: process.cwd(),
+        loader: 'babel-loader',
+        options: {
+          presets:[
+            [
+              '@babel/preset-typescript',
+              {
+                allExtensions: true
+              }
+            ]
+          ]
+        }
       },
       {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
-          compilerOptions: {
-            preserveWhitespace: false
+          preserveWhitespace: false
+        }
+      },
+      {
+        test: /\.md/,
+        use: [
+          {
+            loader: 'vue-loader',
+            options: {
+              compilerOptions: {
+                preserveWhitespace: false
+              }
+            }
+          },
+          {
+            loader: path.resolve(__dirname, './md-loader/index.js')
           }
-        }
+        ]
       },
       {
-        test: /\.css$/,
-        loaders: ['style-loader', 'css-loader']
-      },
-      {
-        test: /\.(svg|otf|ttf|woff2?|eot|gif|png|jpe?g)(\?\S*)?$/,
+        test: /\.(png|jpe?g|gif|svg|ttf|woff|woff2)(\?.*)?$/,
         loader: 'url-loader',
-        query: {
-          limit: 10000,
-          name: path.posix.join('static', '[name].[hash:7].[ext]')
+        options: {
+          limit: 10,
+          name: path.posix.join("static", 'img/[name].[hash:7].[ext]'),
+          esModule: false
         }
-      }
+      },
     ]
   },
   plugins: [
-    new ProgressBarPlugin(),
-    new VueLoaderPlugin()
+    new VueLoaderPlugins()
   ]
-};
+}
 
-module.exports = webpackConfig;
+
+webpack(config,function(err,res){
+  if (err) {
+    console.log('err', err)
+  } else {
+    console.log("lib seccess");
+  }
+  // console.log("res", res);
+});

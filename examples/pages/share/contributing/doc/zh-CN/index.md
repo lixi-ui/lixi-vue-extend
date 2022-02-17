@@ -1,18 +1,17 @@
 ## 介绍
-
-#### 这是一个响应式框架
-
 #### 使用的是 github 管理。
 
 #### 项目下载 
 
 ```sh
-  git clone git://github.com/g-ui.git
-  cd g-ui
+  git clone git@gitlab.izene.com:gshopper/gshopper-wap-node.git
+  cd gshopper-wap-node
   # 切换到开发的分支 所有的开发都以这个分支为主
   git checkout develop
   # 基于 develop 开发的分支,创建自己的分支
   git checkout -b dev-ling
+  # 或者创建任务分支
+  git checkout -b dev-a54654645
   npm i
   npm run dev
 ```
@@ -50,6 +49,7 @@
   git commit -m '一些提交的信息'
   # 多个 commit 记得要合并代码
   git rebase -i <commitId>
+  ### 将 pick 改为 f 进行提交强制合并未一个 commit
   git push
 ```
 
